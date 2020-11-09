@@ -1,0 +1,5 @@
+data-no-retina отменить работу скрипта
+
+нужны файлы @2x
+
+https://imulus.github.io/retinajs/

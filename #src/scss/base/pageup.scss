@@ -1,0 +1,29 @@
+.pageup {
+	position: fixed;
+	// display: none;
+	display: block;
+	opacity: 0;
+	bottom: 50px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	// z-index: 99;
+	z-index: -1;
+	transition: opacity 800ms;
+	visibility: hidden;
+
+	svg path {
+		transition: fill 0.2s ease-in;
+
+		&:hover {
+			fill: #1c4db1;
+		}
+	}
+
+	// класс для чистого js, для jquery нужно редактировать комментарии
+	&-show {
+		opacity: 1;
+		z-index: 99;
+		visibility: visible;
+	}
+}

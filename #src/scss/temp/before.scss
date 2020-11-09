@@ -1,0 +1,121 @@
+.before {
+
+	&__wrapper {
+		margin: 0 auto;
+		margin-top: 100px;
+		max-width: 960px;
+		height: 400px;
+		position: relative;
+	}
+
+	// навигация слайдера, стрелки
+	&__control-prev {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		left: -90px;
+		transform: translateY(-50%);
+	}
+
+	&__control-next {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		right: -90px;
+		transform: translateY(-50%);
+	}
+}
+
+// навигация слайдера, точки
+.tns-nav {
+	text-align: center;
+	margin: 20px 0;
+
+	button {
+		transition: background-color 0.3s ease-in;
+		outline: none;
+
+		&:hover {
+			background-color: #999;
+		}
+	}
+}
+
+.tns-nav>[aria-controls] {
+	padding: 0;
+	margin: 0 5px;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: #d1d1d1;
+	border: 0;
+}
+
+.tns-nav>.tns-nav-active {
+	background-color: #5b7fda;
+}
+
+.tns-nav button:hover {
+	background-color: #5b7fda;
+}
+
+//before & after
+.image-comparison {
+	position: relative;
+	display: inline-block;
+	height: 400px;
+	max-width: 970px;
+	overflow: hidden;
+}
+
+.image-comparison__after {
+	position: absolute;
+	width: 50%;
+	overflow: hidden;
+}
+
+.image-comparison__image {
+	display: block;
+}
+
+/* Ползунок */
+.image-comparison__slider {
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 2px;
+	height: 100%;
+	cursor: col-resize;
+	outline: none;
+	border: none;
+}
+
+/* Стрелки */
+.image-comparison__slider::before {
+	content: '';
+	position: absolute;
+	top: calc(50% - 25px);
+	left: -24px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	// background: transparent url('../img/icons/play.png') no-repeat center;
+	border: 2px solid #fff;
+	background-size: 60%;
+}
+
+.image-comprison__slider:hover,
+.image-comprison__slider:focus,
+.image-comprison__slider:hover::before,
+.image-comprison__slider:focus::before {
+	outline: none;
+	border: none;
+}

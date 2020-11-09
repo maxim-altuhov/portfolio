@@ -1,0 +1,69 @@
+<a data-modal href="#" style="background-color: bisque; display: block; text-align: center; padding: 10px;">ОТКРЫТЬ
+	МОДАЛКУ</a>
+
+<div class="overlay-modal hide" id="overlay_modal">
+
+	<div class="modal-main hide" id="modal_main">
+		<div class="modal-main__close" data-close>&times;</div>
+		<div class="modal-main__subtitle">Просто заполните форму</div>
+		<div class="modal-main__descr">и мы перезвоним вам в течение 10 минут</div>
+		<form id="form_id" action="#" class="feed__form-modal">
+			<!-- <div class="form-group file-upload">
+				<button type="button">Загрузить фотографию</button>
+				<div>Файл не выбран</div>
+				<input accept="image/*" data-valid name="image[]" type="file">
+			</div> -->
+			<div class="form-group">
+				<label for="form_name">Ваше имя</label>
+				<input data-valid name="name" type="text" placeholder="Ваше имя" autocomplete="off" id="form_name">
+				<div class="errors-input"></div>
+			</div>
+			<div class="form-group">
+				<label for="form_phone">Ваш телефон</label>
+				<input data-valid name="phone" type="tel" placeholder="+7 000 000 00 00" autocomplete="off"
+					id="form_phone">
+				<div class="errors-input"></div>
+			</div>
+			<!-- <div class="form-group">
+				<label for="form_email">Ваш E-mail</label>
+				<input data-valid name="email" type="email" placeholder="Ваш E-mail" autocomplete="off" id="form_email">
+				<div class="errors-input"></div>
+			</div> -->
+			<!-- <div class="form-group">
+				<label for="form_textForm">Сообщение</label>
+				<textarea data-valid name="textForm" placeholder="Ваше сообщение..." autocomplete="off"
+					id="form_textForm"></textarea>
+				<div class="errors-input"></div>
+			</div> -->
+			<!-- <div class="form-group">
+				<label for="password">Пароль</label>
+				<input data-valid name="password" type="password" placeholder="Введите пароль" autocomplete="off"
+					id="password">
+				<div class="errors-input"></div>
+			</div> -->
+			<!-- <div class="form-group">
+				<label for="password_conf">Повторите пароль</label>
+				<input data-valid name="password-conf" type="password" placeholder="Повторите пароль" autocomplete="off"
+					id="password_conf">
+				<div class="errors-input"></div>
+			</div> -->
+			<!-- <div class="form-group form-group__checkbox">
+				<input data-valid name="checkbox" type="checkbox" class="form-checkbox" id="check1">
+				<label class="form-check-label" for="check1">Даю согласие на обработку моих персональных данных</label>
+			</div> -->
+			<button class="button__modal" id="button_modal">Отправить</button>
+		</form>
+	</div>
+
+	<div class="modal-main modal-main_mini hide" id="modal_thankyou">
+		<div class="modal-main__close" data-close>&times;</div>
+		<div class="modal-main__subtitle">Спасибо за вашу заявку!</div>
+		<div class="modal-main__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+	</div>
+	<div class="modal-main modal-main_mini hide" id="modal_error">
+		<div class="modal-main__close" data-close>&times;</div>
+		<div class="modal-main__subtitle">Ошибка!</div>
+		<div class="modal-main__descr">Что-то пошло не так, попробуйте ещё раз!</div>
+	</div>
+
+</div>

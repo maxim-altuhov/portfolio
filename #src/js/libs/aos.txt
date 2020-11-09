@@ -1,0 +1,31 @@
+Basic
+Add styles in <head>:
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+Add script right before closing </body> tag, and initialize AOS:
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+
+    или
+
+    AOS.init({disable: 'mobile'});
+  </script>
+
+    <div
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+  </div>
+
+
+  https://michalsnik.github.io/aos/

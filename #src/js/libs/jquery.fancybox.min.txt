@@ -1,0 +1,4 @@
+http://fancyapps.com/fancybox/3/
+
+
+data-fancybox

@@ -1,0 +1,154 @@
+.reviews {
+	padding: 50px 0 50px 0;
+
+	&__wrapper {
+		margin-top: 35px;
+		position: relative;
+	}
+
+	&__element {
+		width: 100%;
+		min-height: 108px;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 22px;
+		text-align: justify;
+		color: #000;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	&__point {
+		@media (max-width: 575px) {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__photo {
+		width: 114px;
+		height: 114px;
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	&__img {
+		width: 114px;
+		margin: 0 auto;
+	}
+
+	&__name {
+		font-size: 18px;
+		font-weight: 700;
+		margin-top: 15px;
+	}
+
+	&__text {
+		margin-top: 5px;
+
+		@media (max-width: 575px) {
+			width: 80%;
+			margin: 5px auto;
+		}
+	}
+
+	&__block-arrows {
+		display: flex;
+		justify-content: center;
+
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&__arrow {
+		margin-left: 25px;
+		margin-right: 25px;
+		cursor: pointer;
+	}
+}
+
+.slick {
+	transition: 0.2s all;
+
+	&-list {
+		margin-left: 100px;
+		margin-right: 100px;
+
+		@media (max-width: 1199px) {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	&-slide {
+		min-height: 300px;
+		transition: 0.2s all;
+		opacity: 0.3;
+		transform: scale(0.6);
+
+		@media (max-width: 991px) {
+			transform: scale(1);
+			opacity: 1;
+			padding: 0 50px 0 50px;
+		}
+	}
+
+	&-counter {
+		margin-top: 25px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&-center {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	&-dots {
+		display: flex;
+		justify-content: center;
+
+		li {
+			width: 12px;
+			height: 12px;
+			background-color: #2e6496;
+			font-size: 0;
+			border-radius: 50%;
+			margin-left: 5px;
+			margin-right: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in;
+
+			&.slick-active {
+				background-color: red;
+			}
+
+			&:hover {
+				background-color: red;
+			}
+		}
+	}
+}
+
+.prev {
+	position: absolute;
+	left: 43%;
+	top: 10%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.next {
+	position: absolute;
+	left: 56%;
+	top: 10%;
+	z-index: 10;
+	cursor: pointer;
+}

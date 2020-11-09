@@ -1,0 +1,42 @@
+$font-family: "Montserrat",
+sans-serif;
+
+body {
+	font-family: $font-family;
+	outline: none;
+	background-color: #fff;
+}
+
+input,
+button,
+textarea {
+	font-family: $font-family;
+}
+
+// классы для плавного скрывания/показывания элемента
+.hide {
+	opacity: 0;
+	transition: 500ms all;
+	z-index: -1 !important;
+	visibility: hidden;
+}
+
+.show {
+	opacity: 1;
+	transition: 300ms opacity;
+	z-index: 999 !important;
+	visibility: visible;
+}
+
+//класс фиксации меню
+.fixed {
+	position: fixed !important;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+//fix padding чтобы не скакал блок под меню
+.do-fix {
+	padding-top: 100px;
+}
