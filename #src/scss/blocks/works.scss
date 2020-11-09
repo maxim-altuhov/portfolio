@@ -1,0 +1,144 @@
+.works {
+	&__top {
+		text-align: center;
+		max-width: 300px;
+		margin: 0 auto;
+
+		div {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-left: 10px;
+		margin-right: 10px;
+
+		@media (max-width: 1199px) {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		@media (max-width: 991px) {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+
+		@media (max-width: 767px) {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		@media (max-width: 575px) {
+			justify-content: center;
+		}
+
+		// &-block {
+		// 	&:last-child {
+		// 		@media (min-width: 1199px) {
+		// 			display: none;
+		// 		}
+		// 	}
+
+		// 	&_empty {
+		// 		@media (max-width: 575px) {
+		// 			display: none;
+		// 		}
+		// 	}
+		// }
+	}
+
+	&__tabs {
+		display: flex;
+		margin: 50px 0;
+		justify-content: center;
+	}
+
+	&__tab-item {
+		width: 150px;
+		height: 30px;
+		border-bottom: 2px solid $main-color;
+		margin-right: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 30px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+
+	&__element {
+		position: relative;
+		margin-top: 30px;
+		// margin-left: 15px;
+		// margin-right: 15px;
+		width: 350px;
+		height: 450px;
+		flex: 1 0 350px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		overflow: hidden;
+
+		@media (max-width: 767px) {
+			width: 240px;
+		}
+
+		@media (max-width: 575px) {
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+
+		&_empty {
+			border: 0;
+		}
+
+		img {
+			width: 100%;
+			min-height: 100%;
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+
+	&__descr {
+		text-align: center;
+		font-weight: 700;
+		width: 240px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+}
+
+.tab-active {
+	background-color: $main-color;
+	color: #fff;
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+
+.works__tab-body {
+	display: none;
+}
+
+.body-active {
+	display: block;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

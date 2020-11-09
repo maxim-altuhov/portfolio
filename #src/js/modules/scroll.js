@@ -17,24 +17,6 @@ function scroll() {
 		}
 	});
 
-	// подсвечивание активного пункта меню
-	const sectionBlock = document.querySelectorAll('[data-section]');
-
-	window.addEventListener('scroll', function () {
-		let scrollInfo = Math.round(window.pageYOffset || document.documentElement.scrollTop);
-
-		sectionBlock.forEach((elem) => {
-			let topBlock = elem.offsetTop - 100, // здесь нужно скорректировать значение на высоту меню
-				bottomBlock = topBlock + elem.scrollHeight,
-				idBlock = elem.getAttribute('id');
-
-			if (scrollInfo > topBlock && scrollInfo < bottomBlock && idBlock !== null) {
-				document.querySelector('.menu a.active').classList.remove('active');
-				document.querySelector(`.menu a[href="#${idBlock}"]`).classList.add('active');
-			}
-		});
-	});
-
 	// плавный скролл к блоку
 	const navigationLinks = document.querySelectorAll('nav a');
 

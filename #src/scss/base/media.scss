@@ -1,16 +1,5 @@
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-
-}
-
 .container {
-	max-width: 1140px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -31,7 +20,7 @@ only screen and (                min-resolution: 2dppx) {
 	}
 }
 
- // Малые девайсы («ландшафтные», < 768px)
+// Малые девайсы («ландшафтные», < 768px)
 @media (max-width: 767px) {
 	.container {
 		max-width: 575px;

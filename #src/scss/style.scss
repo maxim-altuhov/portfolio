@@ -1,16 +1,15 @@
-// если будем использовать свои шрифты через gulp
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"),
+		url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
 
-// @mixin font($font_name, $file_name, $weight, $style) {
-// 	@font-face {
-// 		font-family: $font_name;
-// 		font-display: swap;
-// 		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-// 		font-weight: #{$weight};
-// 		font-style: #{$style};
-// 	}
-// }
-
-// @import '~bootstrap/dist/css/bootstrap-reboot.min';
+@import '~bootstrap/dist/css/bootstrap-reboot.min';
 // @import "~baguettebox.js/dist/baguetteBox.min.css";
 // @import '~slick-carousel/slick/slick.scss';
 // @import '~slick-carousel/slick/slick-theme.scss';
@@ -22,16 +21,21 @@
 // @import 'libs/jquery.fancybox.min';
 // @import 'libs/simplebar.min';
 
-// @import 'base/null';
-// @import 'base/fonts';
-// @import 'base/base';
+@import 'base/null';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/base';
 // @import 'base/menu';
 // @import 'base/hamburger1';
-// @import 'base/hamburger2';
+@import 'base/hamburger2';
 // @import 'base/forms';
-// @import 'base/pageup';
+@import 'base/pageup';
 // @import 'base/modal';
-// @import 'base/buttons';
+@import 'base/buttons';
+
+@import 'blocks/promo';
+@import 'blocks/skills';
+@import 'blocks/works';
 
 // @import 'temp/block1';
 // @import 'temp/block2';
@@ -51,4 +55,4 @@
 // @import 'temp/footer';
 // @import 'temp/404';
 
-// @import 'base/media';
+@import 'base/media';

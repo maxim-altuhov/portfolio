@@ -22,14 +22,14 @@
 // import galleryBox from '../modules/baguetteBox.js';
 // import ibgremove from '../modules/ibg.js';
 // import custom from '../modules/custom.js';
-// import menu from '../modules/menu.js';
+import menu from '../modules/menu.js';
 // import forms from '../modules/forms.js';
 // import modal from '../modules/modal.js';
 // import inMask from '../modules/inputMask.js';
 // import drop from '../modules/drop';
 // import validator from '../modules_jquery/validator.js';
-// import tabs from '../modules/tabs.js';
-// import scroll from '../modules/scroll.js';
+import tabs from '../modules/tabs.js';
+import scroll from '../modules/scroll.js';
 // import accordion from '../modules/accordion.js';
 // import inputJS from '../modules/input.js';
 // import aosinit from '../modules/aosinit.js';
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	// galleryBox();
 	// ibgremove();
 	// custom();
-	// menu();
+	menu();
 
 	// forms({
 	// 	formName: 'form',
@@ -90,8 +90,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	// inMask();
 	// drop('[name="image[]"]');
 	// validator();
-	// tabs();
-	// scroll();
+	tabs();
+	scroll();
 	// accordion();
 	// inputJS();
 	// aosinit();

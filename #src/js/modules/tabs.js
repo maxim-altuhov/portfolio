@@ -1,8 +1,8 @@
 function tabs() {
 
 	// переключение табов (свойство классов смотреть в 4webcode)
-	const tabsElements = document.querySelectorAll('.work__tabs div'),
-		workBody = document.querySelectorAll('.work__tab-body');
+	const tabsElements = document.querySelectorAll('.works__tabs div'),
+		workBody = document.querySelectorAll('.works__tab-body');
 
 	tabsElements.forEach(elem => {
 		elem.addEventListener('click', (e) => {

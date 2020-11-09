@@ -1,4 +1,4 @@
-$font-family: "Montserrat",
+$font-family: "RobotoSlab",
 sans-serif;
 
 body {
@@ -36,7 +36,59 @@ textarea {
 	left: 0;
 }
 
-//fix padding чтобы не скакал блок под меню
-.do-fix {
-	padding-top: 100px;
+
+//общие классы
+.subtitle {
+	position: relative;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+	z-index: 1;
+
+	&_marker::before {
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: -11px;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: $main-color;
+		z-index: -1;
+	}
+
+	&_center::before {
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: $main-color;
+		z-index: -1;
+	}
+}
+
+.title {
+	position: relative;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 52px;
+	color: #000000;
+	z-index: 1;
+
+	&_center::before {
+		content: '';
+		position: absolute;
+		top: 120%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100px;
+		height: 3px;
+		background: $main-color;
+		z-index: -1;
+	}
 }
