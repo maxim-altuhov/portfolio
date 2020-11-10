@@ -13,8 +13,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin-left: 10px;
-		margin-right: 10px;
 
 		@media (max-width: 1199px) {
 			margin-left: 5px;
@@ -52,7 +50,7 @@
 
 	&__tabs {
 		display: flex;
-		margin: 50px 0;
+		margin: 50px 0 25px 0;
 		justify-content: center;
 	}
 

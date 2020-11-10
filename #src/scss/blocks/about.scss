@@ -1,0 +1,35 @@
+.about {
+	padding: 20px 0 70px 0;
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__photo {
+		flex-basis: 30%;
+		text-align: right;
+
+		img {
+			width: 250px;
+			height: 300px;
+			object-position: center;
+			object-fit: cover;
+			font-family: 'object-fit: cover; object-position: center;';
+		}
+	}
+
+	&__right {
+		flex-basis: 60%;
+		margin-left: 70px;
+		margin-top: 15px;
+	}
+
+	&__text {
+		margin-top: 25px;
+		text-align: justify;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		color: #000000;
+	}
+}

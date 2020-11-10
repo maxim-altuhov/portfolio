@@ -70,6 +70,18 @@ textarea {
 		background: $main-color;
 		z-index: -1;
 	}
+
+	&_left::before {
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: -10px;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: $main-color;
+		z-index: -1;
+	}
 }
 
 .title {
@@ -87,6 +99,17 @@ textarea {
 		left: 50%;
 		transform: translateX(-50%);
 		width: 100px;
+		height: 3px;
+		background: $main-color;
+		z-index: -1;
+	}
+
+	&_left::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0%;
+		width: 80px;
 		height: 3px;
 		background: $main-color;
 		z-index: -1;
