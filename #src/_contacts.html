@@ -32,25 +32,27 @@
 
 						<div class="contacts__form-group">
 							<label for="name">Ваше имя</label>
-							<input name="name" data-valid type="text" id="name">
+							<input name="name" data-valid type="text" id="name" autocomplete="off">
 							<div class="errors-input"></div>
 						</div>
 
 						<div class="contacts__form-group">
 							<label for="email">Ваша почта</label>
-							<input name="email" data-valid type="email" id="email">
+							<input name="email" data-valid type="email" id="email" autocomplete="off">
 							<div class="errors-input"></div>
 						</div>
 
 					</div>
 
 					<div class="contacts__form-group contacts__form-group_message">
-						<label for="message">Ваше сообщение</label>
-						<textarea name="message" data-valid id="message"></textarea>
+						<label for="textform">Ваше сообщение</label>
+						<textarea name="textform" data-valid id="textform"></textarea>
 						<div class="errors-input"></div>
 					</div>
 
-					<button class="btn btn_big" id="button-form">Отправить сообщение</button>
+					<div class="contacts__form-btn">
+						<button class="btn btn_big" id="button-form">Отправить сообщение</button>
+					</div>
 
 					<div class="status"></div>
 

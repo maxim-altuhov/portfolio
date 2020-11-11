@@ -83,6 +83,11 @@
 		border: 1px solid #ccc;
 		border-radius: 5px;
 		overflow: hidden;
+		transition: border 0.3s linear;
+
+		&:hover {
+			border: 1px solid $main-color;
+		}
 
 		@media (max-width: 767px) {
 			width: 240px;

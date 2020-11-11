@@ -1,17 +1,5 @@
-import {
-	closeModal,
-	openModal
-} from './modal';
-
 function forms({
 	formName,
-	IdPassword,
-	IdPasswordConf,
-	overlay,
-	modalName,
-	thankyou,
-	error,
-	uploadFile,
 	submitButton
 }) {
 
@@ -19,52 +7,22 @@ function forms({
 	let isSubmit = true;
 
 	const forms = document.querySelectorAll(formName),
-		pass = document.querySelector(IdPassword),
-		passConf = document.querySelector(IdPasswordConf),
 		regExpEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
-		regExpName = /[a-z а-яё]/ig,
-		regExpPhone = /^([+]?[0-9\s-\(\)]{3,25})*$/i,
-		regExpPass = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
+		regExpName = /[a-z а-яё]/ig;
 
 	const validate = (elem) => {
-
-		if (elem.hasAttribute('data-valid') && elem.type !== "checkbox") {
-
-			if (elem.value == "") {
-				elem.style.border = '0.5px solid #a33737';
-				elem.nextElementSibling.textContent = 'Поле обязательно для заполнения';
-				isSubmit = false;
-			} else {
-				elem.style.border = '';
-				elem.nextElementSibling.textContent = "";
-				isSubmit = true;
-			}
-
-		}
 
 		if (elem.name === "name" && elem.hasAttribute('data-valid')) {
 
 			if (!regExpName.test(elem.value) || elem.value == "") {
-				elem.style.border = '0.5px solid #a33737';
+				elem.style.border = '1px solid #a33737';
 				elem.nextElementSibling.textContent = 'Введите ваше имя';
+				elem.previousElementSibling.classList.add('error');
 				isSubmit = false;
 			} else {
 				elem.style.border = '';
 				elem.nextElementSibling.textContent = "";
-				isSubmit = true;
-			}
-
-		}
-
-		if (elem.name === "phone" && elem.hasAttribute('data-valid')) {
-
-			if (!regExpPhone.test(elem.value) || elem.value == "") {
-				elem.style.border = '0.5px solid #a33737';
-				elem.nextElementSibling.textContent = 'Введите корректный телефон';
-				isSubmit = false;
-			} else {
-				elem.style.border = '';
-				elem.nextElementSibling.textContent = "";
+				elem.previousElementSibling.classList.remove('error');
 				isSubmit = true;
 			}
 
@@ -73,80 +31,33 @@ function forms({
 		if (elem.name === "email" && elem.hasAttribute('data-valid')) {
 
 			if (!regExpEmail.test(elem.value) || elem.value == "") {
-				elem.style.border = '0.5px solid #a33737';
+				elem.style.border = '1px solid #a33737';
 				elem.nextElementSibling.textContent = 'Введите корректный e-mail адрес';
+				elem.previousElementSibling.classList.add('error');
 				isSubmit = false;
 			} else {
 				elem.style.border = '';
 				elem.nextElementSibling.textContent = "";
+				elem.previousElementSibling.classList.remove('error');
 				isSubmit = true;
 			}
 
 		}
 
-		if (elem.name === "textForm" && elem.hasAttribute('data-valid')) {
+		if (elem.name === "textform" && elem.hasAttribute('data-valid')) {
 
 			if (elem.value === "") {
-				elem.style.border = '0.5px solid #a33737';
+				elem.style.border = '1px solid #a33737';
 				elem.nextElementSibling.textContent = 'Введите сообщение в форму';
+				elem.previousElementSibling.classList.add('error');
 				isSubmit = false;
 			} else {
 				elem.style.border = '';
 				elem.nextElementSibling.textContent = "";
+				elem.previousElementSibling.classList.remove('error');
 				isSubmit = true;
 			}
 
-		}
-
-		if (elem.name === "password" && elem.hasAttribute('data-valid')) {
-
-			if (!regExpPass.test(elem.value) || elem.value == "") {
-				elem.nextElementSibling.textContent = "Введите корректный пароль";
-				elem.style.border = '0.5px solid #a33737';
-				isSubmit = false;
-			} else {
-				elem.style.border = '';
-				elem.nextElementSibling.textContent = "";
-				isSubmit = true;
-			}
-
-		}
-
-		if (elem.name === "password-conf" && elem.hasAttribute('data-valid')) {
-
-			if (passConf.value !== pass.value) {
-				elem.style.border = '0.5px solid #a33737';
-				passConf.nextElementSibling.textContent = "Пароли не совпадают";
-				isSubmit = false;
-			} else {
-				elem.style.border = '';
-				passConf.nextElementSibling.textContent = "";
-				isSubmit = true;
-			}
-
-		}
-
-	};
-
-	const checked = (elem) => {
-
-		if (elem.type === "checkbox" && elem.hasAttribute('data-valid')) {
-			if (elem.value === "") {
-				isSubmit = false;
-			} else {
-				elem.nextElementSibling.classList.remove('error__before');
-				isSubmit = true;
-			}
-		}
-
-		if (elem.type === "file" && elem.hasAttribute('data-valid')) {
-			if (elem.value === "") {
-				elem.previousElementSibling.style.cssText = 'color:#a33737; font-weight: 700;';
-				isSubmit = false;
-			} else {
-				elem.previousElementSibling.style.cssText = '';
-				isSubmit = true;
-			}
 		}
 
 	};
@@ -161,22 +72,16 @@ function forms({
 				});
 			}
 
-			if (elem.type === "checkbox" || elem.type === "file") {
-				elem.addEventListener("change", () => {
-					checked(elem);
-				});
-			}
-
 		}
 
 	});
 
 	//Блок отправки формы + валидация
-	const overlayModal = document.querySelector(overlay),
-		modal = document.querySelector(modalName),
-		modalThankyou = document.querySelector(thankyou),
-		modalError = document.querySelector(error),
-		upload = document.querySelector(uploadFile);
+	const status = document.querySelector('.status'),
+		message = {
+			ok: 'Сообщение отправлено',
+			error: 'Ошибка отправки'
+		};
 
 	const postData = async (url, data) => {
 		let res = await fetch(url, {
@@ -199,48 +104,7 @@ function forms({
 		forms.forEach(item => {
 			item.reset();
 		});
-
-		if (upload) {
-			upload.previousElementSibling.textContent = "Файл не выбран";
-		}
 	};
-
-	const checkUploadFile = (file) => {
-
-		if (!['image/jpeg', 'image/png'].includes(file.type)) {
-			upload.value = '';
-			upload.previousElementSibling.textContent = 'Разрешены только изображения';
-
-			return;
-		}
-
-		if (file.size > 2 * 1024 * 1024) {
-			upload.value = '';
-			upload.previousElementSibling.textContent = 'Файл должен быть менее 2Мб';
-			return;
-		}
-
-	};
-
-	if (upload) {
-		upload.addEventListener("change", () => {
-			let dots;
-
-			if (upload.files[0] !== undefined) {
-				const arr = upload.files[0].name.split('.');
-
-				arr[0].length > 6 ? dots = "..." : dots = '.';
-				const name = arr[0].substring(0, 6) + dots + arr[1];
-				upload.previousElementSibling.textContent = name;
-
-				//проверяем разрешение файла и его размер(2мб)
-				checkUploadFile(upload.files[0]);
-			} else {
-				upload.previousElementSibling.textContent = 'Файл не выбран';
-			}
-
-		});
-	}
 
 	forms.forEach((form) => {
 		form.addEventListener("submit", function (e) {
@@ -251,15 +115,9 @@ function forms({
 				if (elem.tagName != "BUTTON" && elem.value === "" && elem.type !== "file" && elem.hasAttribute('data-valid')) {
 					elem.style.border = '0.5px solid #a33737';
 					elem.nextElementSibling.textContent = 'Поле обязательно для заполнения';
-					isSubmit = false;
-				} else if (elem.type === "file" && elem.value === "" && elem.hasAttribute('data-valid')) { //условие для инпута с файлом, т.к. он имеет другую структуру
-					elem.previousElementSibling.style.cssText = 'color:#a33737; font-weight: 700;';
-					isSubmit = false;
-				} else if (elem.type === "checkbox" && !elem.checked && elem.hasAttribute('data-valid')) { //условие для инпута с чекбоксом
-					elem.nextElementSibling.classList.add('error__before');
+					elem.previousElementSibling.classList.add('error');
 					isSubmit = false;
 				}
-
 			}
 
 			const btnSubmit = form.querySelector(submitButton);
@@ -274,18 +132,21 @@ function forms({
 				postData('mailer/sendmail.php', formData)
 					.then(() => {
 						clearForm();
-						closeModal(modal);
-						openModal(overlayModal);
-						openModal(modalThankyou);
+						status.classList.add('status_ok');
+						status.textContent = message.ok;
 					})
 					.catch(() => {
-						closeModal(modal);
-						openModal(overlayModal);
-						openModal(modalError);
+						status.classList.add('status_error');
+						status.textContent = message.error;
 					})
 					.finally(() => {
 						btnSubmit.removeAttribute('disabled');
 						btnSubmit.textContent = btnText;
+						setTimeout(() => {
+							status.classList.remove('status_ok');
+							status.classList.remove('status_error');
+							status.textContent = '';
+						}, 2000);
 					});
 			}
 		});

@@ -14,7 +14,7 @@ $mail->IsHTML(true);
 //От кого письмо
 $mail->setFrom('info@4webcode.ru', 'Сообщение с сайта');
 //Кому отправить
-$mail->addAddress('m_altuhov@mail.ru');
+$mail->addAddress('max_work86@mail.ru');
 //Тема письма
 $mail->Subject = 'Сообщение с сайта';
 
@@ -30,8 +30,8 @@ if(trim(!empty($_POST['phone']))) {
 if(trim(!empty($_POST['email']))) {
 	$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 }
-if(trim(!empty($_POST['textForm']))) {
-	$body.='<p><strong>Сообщение:</strong> '.$_POST['textForm'].'</p>';
+if(trim(!empty($_POST['textform']))) {
+	$body.='<p><strong>Сообщение:</strong> '.$_POST['comment'].'</p>';
 }
 if(trim(!empty($_POST['password']))) {
 	$body.='<p><strong>Пароль:</strong> '.$_POST['password'].'</p>';

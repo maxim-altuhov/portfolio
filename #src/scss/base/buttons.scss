@@ -13,6 +13,7 @@ button.btn {
 	color: #000000;
 	cursor: pointer;
 	transition: background 0.3s ease;
+	outline: none;
 
 	&:hover {
 		background: #ffcb69;
