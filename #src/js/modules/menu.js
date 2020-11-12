@@ -7,7 +7,6 @@ function menu() {
 		hamburger = document.querySelector('#hamburger');
 
 	function menuToggle() {
-		console.log(hamburger);
 		hamburger.classList.toggle('active');
 		menu.classList.toggle('menu__wrapper_active');
 		menuOverlay.classList.toggle('show');
