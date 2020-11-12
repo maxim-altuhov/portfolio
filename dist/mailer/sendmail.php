@@ -31,7 +31,7 @@ if(trim(!empty($_POST['email']))) {
 	$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 }
 if(trim(!empty($_POST['textform']))) {
-	$body.='<p><strong>Сообщение:</strong> '.$_POST['comment'].'</p>';
+	$body.='<p><strong>Сообщение:</strong> '.$_POST['textform'].'</p>';
 }
 if(trim(!empty($_POST['password']))) {
 	$body.='<p><strong>Пароль:</strong> '.$_POST['password'].'</p>';
