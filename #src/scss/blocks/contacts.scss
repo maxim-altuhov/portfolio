@@ -1,6 +1,10 @@
 .contacts {
 	padding: 80px 0;
 
+	@media (max-width:991px) {
+		padding: 50px 0 40px 0;
+	}
+
 	&__top {
 		text-align: center;
 	}
@@ -8,6 +12,22 @@
 	&__wrapper {
 		margin-top: 50px;
 		display: flex;
+
+		@media (max-width:991px) {
+			flex-direction: column;
+			margin: 50px 70px 0 70px;
+		}
+
+
+		@media (max-width:767px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media (max-width:575px) {
+			margin: 50px 5px 0 5px;
+		}
 
 		p {
 			position: relative;
@@ -30,10 +50,18 @@
 
 	&__left {
 		flex-basis: 50%;
+
+		@media (max-width: 991px) {
+			flex-basis: auto;
+		}
 	}
 
 	&__right {
-		flex-basis: 50%;
+		flex-basis: auto;
+
+		@media (max-width: 991px) {
+			margin-top: 50px;
+		}
 	}
 
 	&__title {

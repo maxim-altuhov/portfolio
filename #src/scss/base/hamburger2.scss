@@ -3,19 +3,34 @@
 	}
 
 	.ham {
+		position: absolute;
+		top: 0;
+		left: 0;
 		cursor: pointer;
 		z-index: 2000;
-		margin-left: 100px;
+		margin-left: 20px;
 		-webkit-tap-highlight-color: transparent;
 		transition: transform 400ms;
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		transition: 0.5s;
 	}
 
 	.hamRotate.active {
 		transform: rotate(45deg);
+		position: fixed;
+		left: 230px;
+
+		@media (max-width:991px) {
+			left: 190px;
+		}
+
+		@media (max-width:575px) {
+			left: auto;
+			right: 10px;
+		}
 	}
 
 	.hamRotate180.active {

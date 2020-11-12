@@ -3,16 +3,25 @@ function menu() {
 	// меню и бургер
 	const menu = document.querySelector('.menu__wrapper'),
 		menuItem = document.querySelectorAll('.menu__link'),
+		menuOverlay = document.querySelector('.menu__overlay'),
 		hamburger = document.querySelector('#hamburger');
 
 	function menuToggle() {
-		hamburger.classList.toggle('active'); //для hamburger2
+		console.log(hamburger);
+		hamburger.classList.toggle('active');
 		menu.classList.toggle('menu__wrapper_active');
-		document.querySelector('body').classList.toggle('lock');
+		menuOverlay.classList.toggle('show');
+		// document.querySelector('body').classList.toggle('lock');
 	}
 
 	hamburger.addEventListener('click', () => {
 		menuToggle();
+	});
+
+	menuOverlay.addEventListener('click', (e) => {
+		if (e.target == menuOverlay) {
+			menuToggle();
+		}
 	});
 
 	menuItem.forEach(item => {

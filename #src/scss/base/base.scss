@@ -16,16 +16,16 @@ textarea {
 // классы для плавного скрывания/показывания элемента
 .hide {
 	opacity: 0;
-	transition: 500ms all;
+	transition: 0.3s all;
 	z-index: -1 !important;
 	visibility: hidden;
 }
 
 .show {
-	opacity: 1;
-	transition: 300ms opacity;
+	opacity: 1 !important;
+	transition: 0.3s opacity !important;
 	z-index: 999 !important;
-	visibility: visible;
+	visibility: visible !important;
 }
 
 //класс фиксации меню
@@ -56,6 +56,10 @@ textarea {
 		border-radius: 50%;
 		background: $main-color;
 		z-index: -1;
+
+		@media (max-width:575px) {
+			left: 35px;
+		}
 	}
 
 	&_center::before {
@@ -91,6 +95,11 @@ textarea {
 	line-height: 52px;
 	color: #000000;
 	z-index: 1;
+
+	@media (max-width:991px) {
+		font-size: calc(36px/1.5);
+		line-height: 1.5;
+	}
 
 	&_center::before {
 		content: '';

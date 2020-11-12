@@ -21,5 +21,9 @@ button.btn {
 
 	&_big {
 		width: 220px;
+
+		@media (max-width:767px) {
+			margin: 0 auto;
+		}
 	}
 }

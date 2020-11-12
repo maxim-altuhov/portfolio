@@ -5,8 +5,8 @@ let source_folder = "#src";
 
 let fs = require('fs');
 
-// const isDev = false;
-const isDev = true;
+const isDev = false;
+// const isDev = true;
 const isProd = !isDev;
 
 let path = {
