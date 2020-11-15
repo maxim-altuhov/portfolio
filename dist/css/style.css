@@ -1173,6 +1173,14 @@ a.menu__link::before {
      object-fit: cover;
 }
 
+.works__element_empty {
+  border: none;
+}
+
+.works__element_empty:hover {
+  border: none;
+}
+
 .works__descr {
   text-align: center;
   font-weight: 700;
@@ -1692,6 +1700,10 @@ a.menu__link::before {
   .works__element {
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  .works__element_empty {
+    display: none;
   }
 
   .about__photo {

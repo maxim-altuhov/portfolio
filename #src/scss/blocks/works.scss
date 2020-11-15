@@ -30,19 +30,6 @@
 			justify-content: center;
 		}
 
-		// &-block {
-		// 	&:last-child {
-		// 		@media (min-width: 1199px) {
-		// 			display: none;
-		// 		}
-		// 	}
-
-		// 	&_empty {
-		// 		@media (max-width: 575px) {
-		// 			display: none;
-		// 		}
-		// 	}
-		// }
 	}
 
 	&__tabs {
@@ -109,6 +96,18 @@
 			min-height: 100%;
 			object-position: center;
 			object-fit: cover;
+		}
+	}
+
+	&__element_empty {
+		border: none;
+
+		@media (max-width: 575px) {
+			display: none;
+		}
+
+		&:hover {
+			border: none;
 		}
 	}
 
