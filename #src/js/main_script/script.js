@@ -11,6 +11,7 @@ import forms from '../modules/forms.js';
 import tabs from '../modules/tabs.js';
 import scroll from '../modules/scroll.js';
 import objectFit from '../modules/ofi.js';
+import blockCards from '../modules/block-cards.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -23,5 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	tabs();
 	scroll();
 	objectFit();
+	blockCards();
 
 });

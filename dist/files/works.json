@@ -1,0 +1,106 @@
+ [{
+ 		"href": "https://lamp.4webcode.ru",
+ 		"webp": "img/work1.webp",
+ 		"src": "img/work1.jpg",
+ 		"alt": "work",
+ 		"descr": "Интернет-магазин",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/playground/",
+ 		"webp": "img/work11.webp",
+ 		"src": "img/work11.jpg",
+ 		"alt": "work",
+ 		"descr": "Многостраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/signboard/",
+ 		"webp": "img/work12.webp",
+ 		"src": "img/work12.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://surfing.4webcode.ru",
+ 		"webp": "img/work2.webp",
+ 		"src": "img/work2.jpg",
+ 		"alt": "work",
+ 		"descr": "Сайт на Wordpress",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://globalopt.4webcode.ru",
+ 		"webp": "img/work3.webp",
+ 		"src": "img/work3.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/skinali/",
+ 		"webp": "img/work13.webp",
+ 		"src": "img/work13.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://agro.4webcode.ru",
+ 		"webp": "img/work7.webp",
+ 		"src": "img/work7.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/it-project/",
+ 		"webp": "img/work8.webp",
+ 		"src": "img/work8.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/covid/",
+ 		"webp": "img/work10.webp",
+ 		"src": "img/work10.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://prengi.4webcode.ru",
+ 		"webp": "img/work4.webp",
+ 		"src": "img/work4.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://pulse.4webcode.ru",
+ 		"webp": "img/work5.webp",
+ 		"src": "img/work5.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://teta.4webcode.ru",
+ 		"webp": "img/work6.webp",
+ 		"src": "img/work6.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://4webcode.ru/projects/hclub/",
+ 		"webp": "img/work9.webp",
+ 		"src": "img/work9.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	}
+
+ ]

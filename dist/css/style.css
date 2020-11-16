@@ -1111,6 +1111,7 @@ a.menu__link::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-height: 900px;
 }
 
 .works__tabs {
@@ -1189,6 +1190,49 @@ a.menu__link::before {
   margin-top: 20px;
 }
 
+.works__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.works__page span.page {
+  border: 1px solid #FFA501;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 100%;
+  margin: 0 10px;
+  cursor: pointer;
+  padding-left: 2px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.works__page span.page:hover {
+  background-color: #ffcb69;
+  color: #fff;
+}
+
+.works__page span.page_active {
+  background-color: #FFA501;
+  color: #fff;
+}
+
+.works__page span.page_active:hover {
+  background-color: #FFA501;
+  color: #fff;
+}
+
 .tab-active {
   background-color: #FFA501;
   color: #fff;
@@ -1204,6 +1248,13 @@ a.menu__link::before {
 
 .body-active {
   display: block;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.animation {
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1s;

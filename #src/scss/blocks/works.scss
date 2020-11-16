@@ -13,6 +13,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		min-height: 900px;
 
 		@media (max-width: 1199px) {
 			margin: 0 100px;
@@ -118,6 +119,41 @@
 		margin: 0 auto;
 		margin-top: 20px;
 	}
+
+	&__page {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-top: 50px;
+
+		span.page {
+			border: 1px solid $main-color;
+			width: 30px;
+			height: 30px;
+			line-height: 28px;
+			border-radius: 100%;
+			margin: 0 10px;
+			cursor: pointer;
+			padding-left: 2px;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background-color: #ffcb69;
+				color: #fff;
+			}
+
+			&_active {
+				background-color: $main-color;
+				color: #fff;
+
+				&:hover {
+					background-color: $main-color;
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 .tab-active {
@@ -133,6 +169,11 @@
 
 .body-active {
 	display: block;
+	animation-name: fade;
+	animation-duration: 1s;
+}
+
+.animation {
 	animation-name: fade;
 	animation-duration: 1s;
 }
