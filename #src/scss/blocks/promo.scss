@@ -13,7 +13,15 @@
 	@media all and (-ms-high-contrast: none),
 	(-ms-high-contrast: active) {
 		background-size: 70%;
-		background-position: 85% center;
+		background-position: 95% center;
+
+		@media (max-width:1199px) {
+			background-position: 150% center !important;
+		}
+
+		@media (max-width:991px) {
+			background-position: 100% center !important;
+		}
 	}
 
 	@media (max-width:1199px) {

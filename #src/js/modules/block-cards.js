@@ -27,9 +27,9 @@ function blockCards() {
 			<source srcset=${this.webp} type="image/webp">
 			<img src=${this.src} alt=${this.alt}>
 			</picture>
-				</a>
-		</div>
-		<div class="works__descr">${this.descr}</div>`;
+			</a>
+			</div>
+			<div class="works__descr">${this.descr}</div>`;
 
 			this.parent.append(element);
 

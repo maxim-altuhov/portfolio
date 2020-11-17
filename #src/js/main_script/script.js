@@ -4,6 +4,8 @@ import 'nodelist-foreach-polyfill';
 require('es6-promise').polyfill();
 require('formdata-polyfill');
 import '../modules/remove-polyfill.js';
+import '../modules/append-polyfill.js';
+import '../modules/prepend-polyfill.js';
 
 import webp from '../modules/webp.js';
 import menu from '../modules/menu.js';
