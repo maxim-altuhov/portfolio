@@ -1,6 +1,6 @@
 function tabs() {
 
-	// переключение табов (свойство классов смотреть в 4webcode)
+	// переключение табов
 	const tabsElements = document.querySelectorAll('.works__tabs div'),
 		workBody = document.querySelectorAll('.works__tab-body');
 

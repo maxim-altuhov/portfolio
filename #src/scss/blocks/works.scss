@@ -9,11 +9,25 @@
 		}
 	}
 
+	&__loading {
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+
+		img {
+			width: 35px;
+			height: 35px;
+			margin: 0 10px;
+		}
+	}
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		min-height: 900px;
+		grid-template-rows: repeat(1, 1fr);
+		min-height: 500px;
 		justify-items: center;
 
 		@media (max-width: 1199px) {
@@ -253,7 +267,7 @@
 			border-radius: 100%;
 			margin: 0 10px;
 			cursor: pointer;
-			padding-left: 2px;
+			padding-left: 1px;
 			transition: all 0.3s ease;
 
 			&:hover {

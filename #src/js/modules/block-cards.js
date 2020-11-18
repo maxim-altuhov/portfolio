@@ -1,5 +1,13 @@
 function blockCards() {
 
+	const blocksSait = document.querySelector('#tab1'),
+		blocksOther = document.querySelector('#tab2'),
+		pageBlockSait = document.querySelector('#pageBlock1'),
+		pageBlockOther = document.querySelector('#pageBlock2'),
+		loader = document.querySelectorAll('.works__loading'),
+		worksPage = document.querySelectorAll('.works__page');
+
+	//класс для карточки блоков
 	class WorkCards {
 		constructor(href, webp, src, alt, descr, parent, ...classes) {
 			this.href = href;
@@ -32,6 +40,9 @@ function blockCards() {
 			<div class="works__descr">${this.descr}</div>`;
 
 			this.parent.append(element);
+			loader.forEach((elem) => {
+				elem.style.display = 'none';
+			});
 
 			setTimeout(() => {
 				this.parent.classList.add('animation');
@@ -39,6 +50,7 @@ function blockCards() {
 		}
 	}
 
+	//получаем данные из файла json
 	const getRes = async (url) => {
 		const res = await fetch(url);
 
@@ -49,9 +61,43 @@ function blockCards() {
 		return await res.json();
 	};
 
-	function startRender(url, number, numberPage = 1) {
+	//рендер карточек и пагинации в зависимости от условий
+	function startRender(url, selectorPages, allCards = 9, numberPage = 1) {
 		getRes(url)
 			.then(data => {
+
+				function createPage(indexPagesSait, pageBlock) {
+					for (let i = 1; i <= indexPagesSait; i++) {
+						let page = document.createElement('span');
+						page.classList.add('page');
+						pageBlock.append(page);
+						page.textContent = i;
+					}
+					pageBlock.firstElementChild.classList.add('page_active');
+				}
+
+				try {
+
+					if (selectorPages.getAttribute('id') == 'tab1') {
+
+						let i = data.length,
+							indexPagesSait = Math.ceil(i / allCards);
+						if (indexPagesSait !== 1) {
+							createPage(indexPagesSait, pageBlockSait);
+						}
+					}
+
+					if (selectorPages.getAttribute('id') == 'tab2') {
+
+						let i = data.length,
+							indexPagesSait = Math.ceil(i / allCards);
+						if (indexPagesSait !== 1) {
+							createPage(indexPagesSait, pageBlockOther);
+						}
+					}
+
+				} catch (error) {}
+
 				data.forEach(({
 					href,
 					webp,
@@ -60,42 +106,47 @@ function blockCards() {
 					descr,
 					parent
 				}, i) => {
-					if (numberPage == 1 && i <= number - 1) {
+					if (numberPage == 1 && i <= allCards - 1) {
 						new WorkCards(href, webp, src, alt, descr, parent).render();
-					} else if (numberPage == 2 && i > number - 1 && i <= (number * numberPage) - 1) {
+					} else if (numberPage == 2 && i > allCards - 1 && i <= (allCards * numberPage) - 1) {
 						new WorkCards(href, webp, src, alt, descr, parent).render();
+					} else {
+						if (i > (allCards * (numberPage - 1)) - 1 && i <= (allCards * numberPage) - 1) {
+							new WorkCards(href, webp, src, alt, descr, parent).render();
+						}
 					}
 				});
 			});
 	}
 
-	startRender('./files/works.json', 9);
-	startRender('./files/works-other.json', 9);
+	startRender('./files/works.json', blocksSait);
+	startRender('./files/works-other.json', blocksOther);
 
-	function deleteWorks() {
-		const wrapperBlock = document.querySelectorAll('.works__wrapper');
-
-		wrapperBlock.forEach((elem) => {
-			elem.classList.remove('animation');
-			const array = [...elem.children];
-			array.forEach((item) => {
-				item.remove();
-			});
+	//функция удаления блоков
+	function deleteWorks(selector) {
+		loader.forEach((elem) => {
+			elem.style.display = 'flex';
+		});
+		selector.classList.remove('animation');
+		const array = [...selector.children];
+		array.forEach((item) => {
+			item.remove();
 		});
 	}
 
-	const workPages = document.querySelectorAll('.works__page');
-
-	workPages.forEach((elem) => {
+	// навешиваем события клика, переключение страниц
+	worksPage.forEach((elem) => {
 		elem.addEventListener('click', (e) => {
 
 			if (e.target && e.target.tagName == "SPAN") {
 				const numberPage = +e.target.textContent;
 
-				if (!e.target.classList.contains('page_active')) {
-					deleteWorks();
-					startRender('./files/works.json', 9, numberPage);
-					startRender('./files/works-other.json', 9);
+				if (!e.target.classList.contains('page_active') && e.currentTarget == pageBlockSait) {
+					deleteWorks(blocksSait);
+					startRender('./files/works.json', null, 9, numberPage);
+				} else if (!e.target.classList.contains('page_active') && e.currentTarget == pageBlockOther) {
+					deleteWorks(blocksOther);
+					startRender('./files/works-other.json', null, 9, numberPage);
 				}
 
 				elem.children.forEach((item) => {
