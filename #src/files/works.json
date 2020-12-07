@@ -47,17 +47,25 @@
  		"parent": "#tab1"
  	},
  	{
- 		"href": "https://agro.4webcode.ru",
- 		"webp": "img/work7.webp",
- 		"src": "img/work7.jpg",
+ 		"href": "https://4webcode.ru/projects/delivery/",
+ 		"webp": "img/work14.webp",
+ 		"src": "img/work14.jpg",
  		"alt": "work",
- 		"descr": "Одностраничный сайт",
+ 		"descr": "SPA на чистом JS",
  		"parent": "#tab1"
  	},
  	{
  		"href": "https://4webcode.ru/projects/it-project/",
  		"webp": "img/work8.webp",
  		"src": "img/work8.jpg",
+ 		"alt": "work",
+ 		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://agro.4webcode.ru",
+ 		"webp": "img/work7.webp",
+ 		"src": "img/work7.jpg",
  		"alt": "work",
  		"descr": "Одностраничный сайт",
  		"parent": "#tab1"

@@ -109,9 +109,7 @@ function css() {
 				cascade: true
 			})
 		)
-		.pipe(gulpif(isProd, webpcss({
-			noWebpClass: '.no_webp'
-		}))) //замена на webp изображения
+		.pipe(gulpif(isProd, webpcss()))
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(

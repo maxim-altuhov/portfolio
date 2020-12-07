@@ -1,5 +1,7 @@
 function blockCards() {
 
+	const MAX_NUMBER_PAGES = 9;
+
 	const blocksSait = document.querySelector('#tab1'),
 		blocksOther = document.querySelector('#tab2'),
 		pageBlockSait = document.querySelector('#pageBlock1'),
@@ -29,7 +31,7 @@ function blockCards() {
 				this.classes.forEach(nameClass => element.classList.add(nameClass));
 			}
 
-			element.innerHTML = `<div class="works__element">
+			element.insertAdjacentHTML('afterbegin', `<div class="works__element">
 			<a href=${this.href} target="_blank">
 			<picture>
 			<source srcset=${this.webp} type="image/webp">
@@ -37,9 +39,9 @@ function blockCards() {
 			</picture>
 			</a>
 			</div>
-			<div class="works__descr">${this.descr}</div>`;
+			<div class="works__descr">${this.descr}</div>`);
 
-			this.parent.append(element);
+			this.parent.insertAdjacentElement('beforeend', element);
 			loader.forEach((elem) => {
 				elem.style.display = 'none';
 			});
@@ -62,7 +64,7 @@ function blockCards() {
 	};
 
 	//рендер карточек и пагинации в зависимости от условий
-	function startRender(url, selectorPages, allCards = 9, numberPage = 1) {
+	function startRender(url, selectorPages, numberPage = 1) {
 		getRes(url)
 			.then(data => {
 
@@ -81,7 +83,7 @@ function blockCards() {
 					if (selectorPages.getAttribute('id') == 'tab1') {
 
 						let i = data.length,
-							indexPagesSait = Math.ceil(i / allCards);
+							indexPagesSait = Math.ceil(i / MAX_NUMBER_PAGES);
 						if (indexPagesSait !== 1) {
 							createPage(indexPagesSait, pageBlockSait);
 						}
@@ -90,7 +92,7 @@ function blockCards() {
 					if (selectorPages.getAttribute('id') == 'tab2') {
 
 						let i = data.length,
-							indexPagesSait = Math.ceil(i / allCards);
+							indexPagesSait = Math.ceil(i / MAX_NUMBER_PAGES);
 						if (indexPagesSait !== 1) {
 							createPage(indexPagesSait, pageBlockOther);
 						}
@@ -106,14 +108,12 @@ function blockCards() {
 					descr,
 					parent
 				}, i) => {
-					if (numberPage == 1 && i <= allCards - 1) {
+					if (numberPage == 1 && i <= MAX_NUMBER_PAGES - 1) {
 						new WorkCards(href, webp, src, alt, descr, parent).render();
-					} else if (numberPage == 2 && i > allCards - 1 && i <= (allCards * numberPage) - 1) {
+					} else if (numberPage == 2 && i > MAX_NUMBER_PAGES - 1 && i <= (MAX_NUMBER_PAGES * numberPage) - 1) {
 						new WorkCards(href, webp, src, alt, descr, parent).render();
-					} else {
-						if (i > (allCards * (numberPage - 1)) - 1 && i <= (allCards * numberPage) - 1) {
-							new WorkCards(href, webp, src, alt, descr, parent).render();
-						}
+					} else if (i > (MAX_NUMBER_PAGES * (numberPage - 1)) - 1 && i <= (MAX_NUMBER_PAGES * numberPage) - 1) {
+						new WorkCards(href, webp, src, alt, descr, parent).render();
 					}
 				});
 			});
@@ -143,10 +143,10 @@ function blockCards() {
 
 				if (!e.target.classList.contains('page_active') && e.currentTarget == pageBlockSait) {
 					deleteWorks(blocksSait);
-					startRender('./files/works.json', null, 9, numberPage);
+					startRender('./files/works.json', null, numberPage);
 				} else if (!e.target.classList.contains('page_active') && e.currentTarget == pageBlockOther) {
 					deleteWorks(blocksOther);
-					startRender('./files/works-other.json', null, 9, numberPage);
+					startRender('./files/works-other.json', null, numberPage);
 				}
 
 				elem.children.forEach((item) => {
