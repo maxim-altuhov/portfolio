@@ -56,6 +56,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "aos": "^3.0.0-beta.6",
     "baguettebox.js": "^1.11.1",
+    "body-scroll-lock": "^3.1.5",
     "bootstrap": "^4.4.1",
     "cocoen": "^2.0.5",
     "inputmask": "^5.0.5",

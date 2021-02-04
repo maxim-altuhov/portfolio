@@ -23,11 +23,11 @@
  		"parent": "#tab1"
  	},
  	{
- 		"href": "https://surfing.4webcode.ru",
- 		"webp": "img/work2.webp",
- 		"src": "img/work2.jpg",
+ 		"href": "https://4webcode.ru/projects/maxiiimals/",
+ 		"webp": "img/work15.webp",
+ 		"src": "img/work15.jpg",
  		"alt": "work",
- 		"descr": "Сайт на Wordpress",
+ 		"descr": "Одностраничный сайт",
  		"parent": "#tab1"
  	},
  	{
@@ -60,6 +60,14 @@
  		"src": "img/work8.jpg",
  		"alt": "work",
  		"descr": "Одностраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
+ 		"href": "https://surfing.4webcode.ru",
+ 		"webp": "img/work2.webp",
+ 		"src": "img/work2.jpg",
+ 		"alt": "work",
+ 		"descr": "Сайт на Wordpress",
  		"parent": "#tab1"
  	},
  	{

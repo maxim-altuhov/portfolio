@@ -1,3 +1,8 @@
+import {
+	disableBodyScroll,
+	enableBodyScroll,
+} from 'body-scroll-lock';
+
 function menu() {
 
 	// меню и бургер
@@ -14,7 +19,15 @@ function menu() {
 	}
 
 	hamburger.addEventListener('click', () => {
-		menuToggle();
+		if (hamburger.classList.contains('active')) {
+			menuToggle();
+			enableBodyScroll(menu);
+		} else if (window.matchMedia("(max-width: 575px)").matches && !hamburger.classList.contains('active')) {
+			menuToggle();
+			disableBodyScroll(menu);
+		} else {
+			menuToggle();
+		}
 	});
 
 	menuOverlay.addEventListener('click', (e) => {
@@ -26,7 +39,16 @@ function menu() {
 	menuItem.forEach(item => {
 		item.addEventListener('click', () => {
 			menuToggle();
+			enableBodyScroll(menu);
 		});
+	});
+
+	window.addEventListener('resize', () => {
+		if (window.matchMedia("(min-width: 576px)").matches) {
+			enableBodyScroll(menu);
+		} else if (hamburger.classList.contains('active')) {
+			disableBodyScroll(menu);
+		}
 	});
 
 }
