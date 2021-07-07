@@ -7,6 +7,14 @@
  		"parent": "#tab1"
  	},
  	{
+ 		"href": "https://4webcode.ru/list.html",
+ 		"webp": "img/work-toxin.webp",
+ 		"src": "img/work-toxin.jpg",
+ 		"alt": "work",
+ 		"descr": "Многостраничный сайт",
+ 		"parent": "#tab1"
+ 	},
+ 	{
  		"href": "https://4webcode.ru/projects/playground/",
  		"webp": "img/work11.webp",
  		"src": "img/work11.jpg",

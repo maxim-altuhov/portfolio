@@ -950,6 +950,23 @@ a.menu__link::before {
   border: 1px solid #ffffff;
 }
 
+.list {
+  padding-top: 100px;
+}
+
+.list h1 {
+  font-size: 20px;
+}
+
+.list ul {
+  margin: 25px 0;
+  font-size: 18px;
+}
+
+.list li {
+  margin: 15px 0;
+}
+
 .promo {
   position: relative;
   min-height: 800px;
