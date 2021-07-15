@@ -37,5 +37,13 @@
 		"alt": "works-other",
 		"descr": "Список дел на чистом JS и CSS",
 		"parent": "#tab2"
+	},
+	{
+		"href": "https://4webcode.ru/projects/memory/",
+		"webp": "img/work-other6.webp",
+		"src": "img/work-other6.jpg",
+		"alt": "works-other",
+		"descr": "Игра 'Мемори' на чистом JS и CSS",
+		"parent": "#tab2"
 	}
 ]

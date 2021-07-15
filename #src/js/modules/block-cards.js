@@ -32,7 +32,7 @@ function blockCards() {
 			}
 
 			element.insertAdjacentHTML('afterbegin', `<div class="works__element">
-			<a href=${this.href} target="_blank">
+			<a href=${this.href} target="_blank" rel="noopener noreferrer">
 			<picture>
 			<source srcset=${this.webp} type="image/webp">
 			<img src=${this.src} alt=${this.alt}>
