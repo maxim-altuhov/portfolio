@@ -1120,6 +1120,7 @@ a.menu__link::before {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 70px;
+  gap: 20px;
 }
 
 .skills__block-img img.img_big {
@@ -1128,13 +1129,8 @@ a.menu__link::before {
 }
 
 .skills__block-img img {
-  margin-right: 20px;
   max-width: 70px;
   height: 70px;
-}
-
-.skills__block-img img:last-child {
-  margin-right: 0;
 }
 
 .skills__block-title {

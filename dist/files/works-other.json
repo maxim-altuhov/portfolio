@@ -45,5 +45,13 @@
 		"alt": "works-other",
 		"descr": "Игра 'Мемори' на чистом JS и CSS",
 		"parent": "#tab2"
+	},
+	{
+		"href": "https://4webcode.ru/projects/metalamp/",
+		"webp": "img/work-slider.webp",
+		"src": "img/work-slider.jpg",
+		"alt": "works-other",
+		"descr": "Плагин для JQuery, позволяет добавить функционал 'бегунка' на страницу сайта",
+		"parent": "#tab2"
 	}
 ]
