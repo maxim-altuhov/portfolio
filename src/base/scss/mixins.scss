@@ -1,5 +1,3 @@
-@import './variables';
-
 // добавление шрифтов
 // пример:  @include font('Roboto', 'RobotoSlab-Bold', '700', 'normal');
 @mixin font($font_name, $file_name, $weight, $style) {
