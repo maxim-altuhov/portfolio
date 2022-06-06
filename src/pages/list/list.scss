@@ -1,16 +1,26 @@
+@import '@base/base';
+
 .list {
   padding-top: 100px;
 
-  h1 {
+  &__title {
     font-size: 20px;
   }
 
-  ul {
+  &__subtitle {
     margin: 25px 0;
     font-size: 18px;
   }
 
-  li {
+  &__item {
     margin: 15px 0;
+
+    a {
+      color: #007bff;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
   }
 }

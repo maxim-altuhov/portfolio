@@ -1,9 +1,7 @@
-// основные настройки
 *,
 *:before,
 *:after {
   font-family: $font-family;
-
 }
 
 html {
@@ -12,117 +10,4 @@ html {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-}
-
-
-// классы для плавного скрывания/показывания элемента
-.hide {
-  opacity: 0;
-  transition: 0.3s all;
-  z-index: -1 !important;
-  visibility: hidden;
-
-}
-
-.show {
-  opacity: 1 !important;
-  transition: 0.3s opacity !important;
-  z-index: 999 !important;
-  visibility: visible !important;
-}
-
-//класс фиксации меню
-.fixed {
-  position: fixed !important;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-//общие классы
-.subtitle {
-  position: relative;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  z-index: 1;
-
-  &_marker::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -11px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $main-color;
-    z-index: -1;
-
-    @media (max-width:575px) {
-      left: 35px;
-    }
-  }
-
-  &_center::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $main-color;
-    z-index: -1;
-  }
-
-  &_left::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -10px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $main-color;
-    z-index: -1;
-  }
-}
-
-.title {
-  position: relative;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 52px;
-  color: #000000;
-  z-index: 1;
-
-  @media (max-width:991px) {
-    font-size: calc(36px/1.5);
-    line-height: 1.5;
-  }
-
-  &_center::before {
-    content: '';
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: $main-color;
-    z-index: -1;
-  }
-
-  &_left::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 80px;
-    height: 3px;
-    background: $main-color;
-    z-index: -1;
-  }
 }

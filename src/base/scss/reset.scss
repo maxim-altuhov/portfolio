@@ -24,6 +24,10 @@ a:visited {
   text-decoration: none;
 }
 
+ul li {
+  list-style: none;
+}
+
 :not(output):-moz-ui-invalid {
   box-shadow: none;
 }
