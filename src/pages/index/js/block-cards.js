@@ -1,15 +1,13 @@
 function blockCards() {
-
   const MAX_NUMBER_PAGES = 9;
 
-  const blocksSait = document.querySelector('#tab1'),
-    blocksOther = document.querySelector('#tab2'),
-    pageBlockSait = document.querySelector('#pageBlock1'),
-    pageBlockOther = document.querySelector('#pageBlock2'),
-    loader = document.querySelectorAll('.works__loading'),
-    worksPage = document.querySelectorAll('.works__page');
+  const blocksSait = document.querySelector('#tab-1');
+  const blocksOther = document.querySelector('#tab-2');
+  const pageBlockSait = document.querySelector('#works-page-1');
+  const pageBlockOther = document.querySelector('#works-page-2');
+  const loader = document.querySelectorAll('.works__loading');
+  const worksPage = document.querySelectorAll('.works__page');
 
-  //класс для карточки блоков
   class WorkCards {
     constructor(href, webp, src, alt, descr, parent, ...classes) {
       this.href = href;
@@ -117,7 +115,7 @@ function blockCards() {
   }
 
   startRender('http://localhost:3000/works', blocksSait);
-  startRender('http://localhost:3000/works', blocksOther);
+  startRender('http://localhost:3000/works-other', blocksOther);
 
   //функция удаления блоков
   function deleteWorks(selector) {

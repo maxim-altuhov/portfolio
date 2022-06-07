@@ -33,7 +33,6 @@
     @media (max-width: 1199px) {
       margin: 0 70px;
       grid-template-columns: repeat(2, 1fr);
-      -ms-grid-columns: 1fr 20px 1fr;
     }
 
     @media (max-width: 991px) {
@@ -58,7 +57,7 @@
   }
 
   &__tab-item {
-    width: 150px;
+    min-width: 150px;
     height: 30px;
     border-bottom: 2px solid $main-color;
     margin-right: 30px;
@@ -71,6 +70,58 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &_active {
+      background-color: $main-color;
+      color: #fff;
+      animation-name: fade;
+      animation-duration: 0.5s;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  &__page {
+    border: 1px solid $main-color;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    padding-left: 1px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ffcb69;
+      color: #fff;
+    }
+
+    &_active {
+      background-color: $main-color;
+      color: #fff;
+
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+  }
+
+  &__tab-body {
+    display: none;
+
+    &_active {
+      display: block;
+      animation-name: fade;
+      animation-duration: 1s;
     }
   }
 
@@ -116,63 +167,6 @@
     margin: 0 auto;
     margin-top: 20px;
   }
-
-  &__page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-
-    span.page {
-      border: 1px solid $main-color;
-      width: 30px;
-      height: 30px;
-      line-height: 28px;
-      border-radius: 100%;
-      margin: 0 10px;
-      cursor: pointer;
-      padding-left: 1px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background-color: #ffcb69;
-        color: #fff;
-      }
-
-      &_active {
-        background-color: $main-color;
-        color: #fff;
-
-        &:hover {
-          background-color: $main-color;
-          color: #fff;
-        }
-      }
-    }
-  }
-}
-
-.tab-active {
-  background-color: $main-color;
-  color: #fff;
-  animation-name: fade;
-  animation-duration: 0.5s;
-}
-
-.works__tab-body {
-  display: none;
-}
-
-.body-active {
-  display: block;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-.animation {
-  animation-name: fade;
-  animation-duration: 1s;
 }
 
 @keyframes fade {

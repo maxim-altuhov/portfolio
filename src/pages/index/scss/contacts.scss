@@ -1,23 +1,20 @@
 .contacts {
   padding: 80px 0;
+  font-size: 16px;
 
   @media (max-width:991px) {
     padding: 50px 0 40px 0;
   }
 
-  &__top {
-    text-align: center;
-  }
-
   &__wrapper {
     margin-top: 50px;
     display: flex;
+    justify-content: space-evenly;
 
     @media (max-width:991px) {
       flex-direction: column;
       margin: 50px 70px 0 70px;
     }
-
 
     @media (max-width:767px) {
       flex-direction: column;
@@ -48,28 +45,7 @@
     }
   }
 
-  &__left {
-    flex-basis: 50%;
-
-    @media (max-width: 991px) {
-      flex-basis: auto;
-    }
-  }
-
-  &__right {
-    flex-basis: auto;
-
-    @media (max-width: 991px) {
-      margin-top: 50px;
-    }
-  }
-
-  &__title {
-    padding-bottom: 10px;
-  }
-
-  a {
-
+  &__link {
     color: #000;
     transition: color 0.3s ease;
 

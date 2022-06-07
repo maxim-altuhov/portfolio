@@ -20,21 +20,19 @@
 <body>
   <!-- Menu -->
   <div class="menu" id="scroll_up">
-    <div class="menu__overlay">
-      <nav class="menu__wrapper">
-        <a href="#skills" class="menu__link">Мои навыки</a>
-        <a href="#about" class="menu__link">Обо мне</a>
-        <a href="#works" class="menu__link">Мои работы</a>
-        <a href="#contacts" class="menu__link">Контакты</a>
+    <div class="menu__overlay js-menu__overlay">
+      <nav class="menu__wrapper js-menu__wrapper">
+        <a href="#skills" class="menu__link js-menu__link" data-scroll>Мои навыки</a>
+        <a href="#about" class="menu__link js-menu__link" data-scroll>Обо мне</a>
+        <a href="#works" class="menu__link js-menu__link" data-scroll>Мои работы</a>
+        <a href="#contacts" class="menu__link js-menu__link" data-scroll>Контакты</a>
       </nav>
     </div>
-    <div id="hamburger" class="ham hamRotate ham1">
-      <svg viewBox="0 0 100 100" width="80">
-        <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-        <path class="line middle" d="m 30,50 h 40" />
-        <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-      </svg>
-    </div>
+    <svg class="menu__hamburger js-menu__hamburger" viewBox="0 0 100 100" width="80" tabindex="0">
+      <path class="menu__hamburger-line menu__hamburger-line_position_top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+      <path class="menu__hamburger-line menu__hamburger-line_position_middle" d="m 30,50 h 40" />
+      <path class="menu__hamburger-line menu__hamburger-line_position_bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+    </svg>
   </div>
   <!-- Menu -->
 
@@ -44,9 +42,9 @@
       <div class="promo__info">
         <span class="marker marker_size_big">Привет!</span>
         <h1 class="promo__title">Я фрилансер и frontend-разработчик из города Ростова-на-Дону</h1>
-        <div class="promo__info-link">
-          <a class="btn" href="#works">Портфолио</a>
-          <a class="promo__info-about" href="#about">Про меня</a>
+        <div class="promo__info-about">
+          <a class="promo__info-btn" href="#works" data-scroll>Портфолио</a>
+          <a class="promo__info-link" href="#about" data-scroll>Про меня</a>
         </div>
       </div>
     </div>
@@ -114,7 +112,8 @@
           </div>
           <div class="skills__block-title">React + Redux</div>
           <div class="skills__block-text">
-            React - это библиотека JavaScript, которая используется для создания пользовательского интерфейса. Redux же используется для управления и централизации состояния приложения. Отлично работают в связке и дополняют друг друга.
+            React - это библиотека JavaScript, которая используется для создания пользовательского интерфейса.
+            Redux же используется для управления и централизации состояния приложения. Отлично работают в связке и дополняют друг друга.
           </div>
         </div>
         <div class="skills__block">
@@ -187,7 +186,7 @@
           <div class="about__text">
             Меня зовут Максим, я фрилансер и frontend-разработчик. Последнее время я плотно занимаюсь
             веб-разработкой и созданием сайтов, свой первый сайт я сделал в далёком прошлом, когда ещё учился в
-            школе, и это был сайт с чит-кодами к играм) Я постоянно изучаю новое и никогда не останавливаюсь на
+            школе, и это был сайт с чит-кодами к играм :) Я постоянно изучаю новое и никогда не останавливаюсь на
             достигнутом, внимателен к деталям и пунктуален, сдаю все свои проекты в срок, всегда нахожусь на
             связи и никогда не пропадаю. Буду рад знакомству!
           </div>
@@ -205,28 +204,29 @@
         <h2 class="title title_position_center">Мои работы</h2>
       </div>
       <div class="works__tabs">
-        <div class="works__tab-item tab-active">Сайты</div>
-        <div class="works__tab-item">Разное</div>
+        <div class="works__tab-item js-works__tab-item works__tab-item_active">Сайты</div>
+        <div class="works__tab-item js-works__tab-item">React проекты</div>
+        <div class="works__tab-item js-works__tab-item">Разное</div>
       </div>
       <!-- таб №1 -->
-      <div class="works__tab-body body-active">
-        <div class="works__page" id="pageBlock1">
+      <div class="works__tab-body js-works__tab-body works__tab-body_active">
+        <div class="works__nav" id="works-page-1">
         </div>
         <div class="works__loading">
           <img src="img/icons/loader.gif" alt="loader">Загрузка...
         </div>
-        <div class="works__wrapper" id="tab1">
+        <div class="works__wrapper" id="tab-1">
 
         </div>
       </div>
       <!-- таб №2 -->
-      <div class="works__tab-body">
-        <div class="works__page" id="pageBlock2">
+      <div class="works__tab-body js-works__tab-body">
+        <div class="works__nav" id="works-page-2">
         </div>
         <div class="works__loading">
           <img src="img/icons/loader.gif" alt="loader">Загрузка...
         </div>
-        <div class="works__wrapper" id="tab2">
+        <div class="works__wrapper" id="tab-2">
 
         </div>
       </div>
@@ -237,59 +237,25 @@
   <!-- Contacts -->
   <section class="contacts" id="contacts">
     <div class="container">
-      <div class="contacts__top">
-        <span class="marker marker_position_center">Контакты</span>
-        <h2 class="title title_position_center">Свяжитесь со мной</h2>
-      </div>
       <div class="contacts__wrapper">
-
         <div class="contacts__left">
-          <div class="contacts__title">Любым удобным для вас способом:</div>
-
-          <p class="contacts__item">EMAIL</p>
-          <a href="mailto:&#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;" target="_blank" rel="noopener noreferrer">&#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;</a><br>
-          <a href="mailto:&#109;&#97;&#108;&#116;&#117;&#104;&#111;&#118;&#56;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener noreferrer">&#109;&#97;&#108;&#116;&#117;&#104;&#111;&#118;&#56;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
-
-          <p class="contacts__item">ТЕЛЕФОН <span>(WhatsApp, Telegram)</span></p>
-          <a href="tel:&#43;&#55;&#57;&#49;&#57;&#56;&#56;&#48;&#52;&#52;&#54;&#53;" target="_blank" rel="noopener noreferrer">&#43;&#55;&#32;&#40;&#57;&#49;&#57;&#41;&#32;&#56;&#56;&#48;&#45;&#52;&#52;&#45;&#54;&#53;</a>
-
-          <p class="contacts__item">Мой GitHub</p>
-          <a href="https://github.com/maxim-altuhov" target="_blank" rel="noopener noreferrer">Перейти на GitHub</a>
+          <h2 class="title title_position_left">Мои контакты</h2>
         </div>
-
         <div class="contacts__right">
-          <div class="contacts__title">Или оставьте ваши данные и я сам вам напишу:</div>
-
-          <form id="contacts-form" action="#" class="contacts__form">
-            <div class="contacts__form-row">
-
-              <div class="contacts__form-group">
-                <label for="name">Ваше имя</label>
-                <input name="name" data-valid type="text" id="name" autocomplete="off">
-                <div class="errors-input"></div>
-              </div>
-
-              <div class="contacts__form-group">
-                <label for="email">Ваша почта</label>
-                <input name="email" data-valid type="email" id="email" autocomplete="off">
-                <div class="errors-input"></div>
-              </div>
-
-            </div>
-
-            <div class="contacts__form-group contacts__form-group_message">
-              <label for="textform">Ваше сообщение</label>
-              <textarea name="textform" data-valid id="textform"></textarea>
-              <div class="errors-input"></div>
-            </div>
-
-            <div class="contacts__form-btn">
-              <button type="submit" class="btn btn_big" id="button-form">Отправить сообщение</button>
-            </div>
-
-            <div class="status"></div>
-
-          </form>
+          <p class="contacts__item">EMAIL</p>
+          <a class="contacts__link" href="mailto:&#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;" target="_blank" rel="noopener noreferrer">
+            &#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;
+          </a>
+          <br>
+          <a class="contacts__link" href="mailto:&#109;&#97;&#108;&#116;&#117;&#104;&#111;&#118;&#56;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener noreferrer">
+            &#109;&#97;&#108;&#116;&#117;&#104;&#111;&#118;&#56;&#54;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
+          </a>
+          <p class="contacts__item">ТЕЛЕФОН <span>(WhatsApp, Telegram)</span></p>
+          <a class="contacts__link" href="tel:&#43;&#55;&#57;&#49;&#57;&#56;&#56;&#48;&#52;&#52;&#54;&#53;" target="_blank" rel="noopener noreferrer">
+            &#43;&#55;&#32;&#40;&#57;&#49;&#57;&#41;&#32;&#56;&#56;&#48;&#45;&#52;&#52;&#45;&#54;&#53;
+          </a>
+          <p class="contacts__item">Мой GitHub</p>
+          <a class="contacts__link" href="https://github.com/maxim-altuhov" target="_blank" rel="noopener noreferrer">Перейти на GitHub</a>
         </div>
       </div>
     </div>
@@ -300,22 +266,27 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <p> &#169;2019 4WebCode.ru - Веб-разработка и создание сайтов.</p>
-        <p><a href="https://www.freepik.com/vectors/people" target="_blank" rel="noopener noreferrer">People vector created by pikisuperstar -
-            www.freepik.com</a></p>
-        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer"> www.flaticon.com</a></p>
+        <p class="footer__text"> &#169;2019 4WebCode.ru - Веб-разработка и создание сайтов.</p>
+        <p class="footer__text">
+          <a class="footer__link" href="https://www.freepik.com/vectors/people" target="_blank" rel="noopener noreferrer">People vector created by pikisuperstar - www.freepik.com</a>
+        </p>
+        <p class="footer__text">
+          Icons made by <a class="footer__link" href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a>
+          from <a class="footer__link" href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer"> www.flaticon.com</a>
+        </p>
       </div>
     </div>
   </footer>
   <!-- Footer -->
 
   <!-- pageup -->
-  <nav>
-    <a class="pageup" href="#scroll_up" data-lock_scroll>
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" viewBox="0 0 512 512">
-        <path d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z" fill="#ccc" /></svg>
+  <div>
+    <a class="pageup js-pageup" href="#scroll_up" data-scroll>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
+        <path d="M 0.78125 25 C 0.78125 11.621094 11.621094 0.78125 25 0.78125 C 38.378906 0.78125 49.21875 11.621094 49.21875 25 C 49.21875 38.378906 38.378906 49.21875 25 49.21875 C 11.621094 49.21875 0.78125 38.378906 0.78125 25 Z M 23.339844 13.875 L 10.109375 27.109375 C 9.1875 28.027344 9.1875 29.511719 10.109375 30.421875 L 11.765625 32.078125 C 12.6875 33 14.171875 33 15.078125 32.078125 L 25 22.15625 L 34.921875 32.078125 C 35.839844 33 37.324219 33 38.234375 32.078125 L 39.890625 30.421875 C 40.8125 29.503906 40.8125 28.015625 39.890625 27.109375 L 26.660156 13.875 C 25.742188 12.957031 24.257812 12.957031 23.339844 13.875 Z M 23.339844 13.875 " fill="#ccc" />
+      </svg>
     </a>
-  </nav>
+  </div>
   <!-- pageup -->
 </body>
 
