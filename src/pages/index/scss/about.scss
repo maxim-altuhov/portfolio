@@ -19,29 +19,27 @@
 
     @media (max-width:767px) {
       text-align: center;
-      flex-basis: auto;
     }
 
     @media (max-width:575px) {
       margin-bottom: 25px;
     }
+  }
 
-    img {
-      width: 250px;
-      height: 300px;
-      object-position: center;
-      object-fit: cover;
-      font-family: 'object-fit: cover; object-position: center;';
+  &__img {
+    width: 250px;
+    height: 300px;
+    object-position: center;
+    object-fit: cover;
 
-      @media (max-width:767px) {
-        border-radius: 100%;
-        width: 200px;
-        height: 200px;
-      }
+    @media (max-width:767px) {
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
     }
   }
 
-  &__right {
+  &__descr {
     flex-basis: 60%;
     margin-left: 70px;
     margin-top: 15px;

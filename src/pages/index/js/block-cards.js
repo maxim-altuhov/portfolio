@@ -33,10 +33,7 @@ function blockCards() {
 
       element.insertAdjacentHTML('afterbegin', `<div class="works__element">
 			<a href=${this.href} target="_blank" rel="noopener noreferrer">
-			<picture>
-			<source srcset=${this.webp} type="image/webp">
 			<img src=${this.src} alt=${this.alt}>
-			</picture>
 			</a>
 			</div>
 			<div class="works__descr">${this.descr}</div>`);
@@ -119,8 +116,8 @@ function blockCards() {
       });
   }
 
-  startRender('./files/works.json', blocksSait);
-  startRender('./files/works-other.json', blocksOther);
+  startRender('http://localhost:3000/works', blocksSait);
+  startRender('http://localhost:3000/works', blocksOther);
 
   //функция удаления блоков
   function deleteWorks(selector) {

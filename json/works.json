@@ -1,0 +1,167 @@
+ {
+   "works": [
+     {
+       "href": "https://lamp.4webcode.ru",
+       "src": "img/work1.jpg",
+       "alt": "work",
+       "descr": "Интернет-магазин",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/list.html",
+       "src": "img/work-toxin.jpg",
+       "alt": "work",
+       "descr": "Многостраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/playground/",
+       "src": "img/work11.jpg",
+       "alt": "work",
+       "descr": "Многостраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/signboard/",
+       "src": "img/work12.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/maxiiimals/",
+       "src": "img/work15.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://globalopt.4webcode.ru",
+       "src": "img/work3.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/skinali/",
+       "src": "img/work13.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/delivery/",
+       "src": "img/work14.jpg",
+       "alt": "work",
+       "descr": "SPA на чистом JS",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/it-project/",
+       "src": "img/work8.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://surfing.4webcode.ru",
+       "src": "img/work2.jpg",
+       "alt": "work",
+       "descr": "Сайт на Wordpress",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://agro.4webcode.ru",
+       "src": "img/work7.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/covid/",
+       "src": "img/work10.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://prengi.4webcode.ru",
+       "src": "img/work4.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://pulse.4webcode.ru",
+       "src": "img/work5.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://teta.4webcode.ru",
+       "src": "img/work6.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    },
+     {
+       "href": "https://4webcode.ru/projects/hclub/",
+       "src": "img/work9.jpg",
+       "alt": "work",
+       "descr": "Одностраничный сайт",
+       "parent": "#tab1"
+    }
+  ],
+   "works-other": [
+     {
+       "href": "https://4webcode.ru/projects/clock/",
+       "src": "img/work-other1.jpg",
+       "alt": "works-other",
+       "descr": "Часы на чиcтом JS и CSS",
+       "parent": "#tab2"
+	  },
+     {
+       "href": "https://4webcode.ru/projects/clock-digital/",
+       "src": "img/work-other2.jpg",
+       "alt": "works-other",
+       "descr": "Другой вариант часов на чиcтом JS и CSS",
+       "parent": "#tab2"
+	  },
+     {
+       "href": "https://4webcode.ru/projects/social-icons/",
+       "src": "img/work-other3.jpg",
+       "alt": "works-other",
+       "descr": "Вариант анимации социальных иконок",
+       "parent": "#tab2"
+	  },
+     {
+       "href": "https://4webcode.ru/projects/checkbox/",
+       "src": "img/work-other4.jpg",
+       "alt": "works-other",
+       "descr": "Красивый переключатель на CSS",
+       "parent": "#tab2"
+	  },
+     {
+       "href": "https://4webcode.ru/projects/todo/",
+       "src": "img/work-other5.jpg",
+       "alt": "works-other",
+       "descr": "Список дел на чистом JS и CSS",
+       "parent": "#tab2"
+  	},
+     {
+       "href": "https://4webcode.ru/projects/memory/",
+       "src": "img/work-other6.jpg",
+       "alt": "works-other",
+       "descr": "Игра 'Мемори' на чистом JS и CSS",
+       "parent": "#tab2"
+	  },
+     {
+       "href": "https://4webcode.ru/projects/metalamp/",
+       "src": "img/work-slider.jpg",
+       "alt": "works-other",
+       "descr": "Плагин для JQuery, позволяет добавить функционал 'бегунка' на страницу сайта",
+       "parent": "#tab2"
+	  }
+  ]
+ }

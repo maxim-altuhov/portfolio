@@ -231,6 +231,7 @@ module.exports = {
   },
   optimization: setOptimization(),
   devServer: {
+    watchFiles: ['src/pages/**/*'],
     port: 4200,
     open: true,
   },

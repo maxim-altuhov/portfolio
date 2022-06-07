@@ -23,53 +23,35 @@
 }
 
 //общие классы
-.subtitle {
+.marker {
+  display: inline-block;
   position: relative;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
+  line-height: calc(24 / 16);
   color: #000000;
   z-index: 1;
 
-  &_marker::before {
+  &::before {
     content: '';
     position: absolute;
-    top: -6px;
-    left: -11px;
+    top: 50%;
+    left: -13px;
+    transform: translateY(-50%);
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background: $main-color;
     z-index: -1;
-
-    @media (max-width:575px) {
-      left: 35px;
-    }
   }
 
-  &_center::before {
-    content: '';
-    position: absolute;
-    top: -6px;
+  &_position_center::before {
     left: 50%;
-    transform: translateX(-50%);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $main-color;
-    z-index: -1;
+    transform: translate(-50%, -50%);
   }
 
-  &_left::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -10px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $main-color;
-    z-index: -1;
+  &_size_big {
+    font-size: 25px;
   }
 }
 
@@ -86,26 +68,25 @@
     line-height: 1.5;
   }
 
-  &_center::before {
+  &::before {
     content: '';
     position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
     height: 3px;
     background: $main-color;
     z-index: -1;
   }
 
-  &_left::before {
-    content: '';
-    position: absolute;
+  &_position_center::before {
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+
+  }
+
+  &_position_left::before {
     top: 100%;
     left: 0%;
     width: 80px;
-    height: 3px;
-    background: $main-color;
-    z-index: -1;
   }
 }
