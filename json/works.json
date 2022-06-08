@@ -1,5 +1,5 @@
  {
-   "works": [
+   "web": [
      {
        "id": 1,
        "href": "https://lamp.4webcode.ru",
@@ -129,7 +129,8 @@
        "parent": "#tab1"
     }
   ],
-   "works-other": [
+   "react": [],
+   "other": [
      {
        "id": 1,
        "href": "https://4webcode.ru/projects/clock/",

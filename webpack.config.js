@@ -13,7 +13,8 @@ const pathDir = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
   base: path.join(__dirname, './src/base'),
-  blocks: path.join(__dirname, './src/blocks'),
+  json: path.join(__dirname, './json'),
+  services: path.join(__dirname, './services'),
   pages: path.join(__dirname, './src/pages'),
 };
 const pagesDir = pathDir.pages;

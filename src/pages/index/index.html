@@ -204,39 +204,26 @@
         <h2 class="title title_position_center">Мои работы</h2>
       </div>
       <div class="works__tabs">
-        <div class="works__tab-item js-works__tab-item works__tab-item_active">Сайты</div>
-        <div class="works__tab-item js-works__tab-item">React проекты</div>
-        <div class="works__tab-item js-works__tab-item">Разное</div>
+        <div class="works__tab-item js-works__tab-item works__tab-item_active" data-target="web">Сайты</div>
+        <div class="works__tab-item js-works__tab-item" data-target="react">React проекты</div>
+        <div class="works__tab-item js-works__tab-item" data-target="other">Разное</div>
       </div>
-      <!-- таб №1 -->
-      <div class="works__tab-body js-works__tab-body works__tab-body_active">
-        <div class="works__nav" id="works-page-1">
-        </div>
-        <div class="works__loading">
+      <div class="works__tab-body">
+        <div class="works__nav js-works__nav"></div>
+        <div class="works__loading js-works__loading">
           <img src="img/icons/loader.gif" alt="loader">Загрузка...
         </div>
-        <div class="works__wrapper" id="tab-1">
-
-        </div>
-      </div>
-      <!-- таб №2 -->
-      <div class="works__tab-body js-works__tab-body">
-        <div class="works__nav" id="works-page-2">
-        </div>
-        <div class="works__loading">
-          <img src="img/icons/loader.gif" alt="loader">Загрузка...
-        </div>
-        <div class="works__wrapper" id="tab-2">
-
-        </div>
+        <div class="works__wrapper js-works__wrapper"></div>
       </div>
     </div>
   </section>
   <!-- Works -->
 
+
   <!-- Contacts -->
   <section class="contacts" id="contacts">
     <div class="container">
+      <div class="section-line"></div>
       <div class="contacts__wrapper">
         <div class="contacts__left">
           <h2 class="title title_position_left">Мои контакты</h2>
