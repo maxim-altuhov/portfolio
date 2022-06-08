@@ -1,15 +1,17 @@
 import { useHttp } from '../../../services/useHttp';
 
 function renderCards() {
+  const { request } = useHttp();
   const MAX_CARDS_FOR_PAGE = 9;
+
   const loader = document.querySelector('.js-works__loading');
   const navBlock = document.querySelector('.js-works__nav');
   const blockForRendering = document.querySelector('.js-works__wrapper');
   const tabElements = document.querySelectorAll('.js-works__tab-item');
-  const targetRequest = document.querySelector('.works__tab-item_active').dataset.target;
+  const activeTab = document.querySelector('.js-works__tab-item_active');
   const fragmentWithCards = document.createDocumentFragment();
   const fragmentWithPage = document.createDocumentFragment();
-  const { request } = useHttp();
+  let currentTarget = activeTab.dataset.target;
 
   const createCards = (objWithCard) => {
     const {
@@ -49,18 +51,18 @@ function renderCards() {
     }
   };
 
-  const initRequest = (page = 1, useCreatePage = true, target = 'web') => {
+  const initRequest = (page = 1, useCreatePage = true, targetRequest = currentTarget) => {
     loader.style.display = '';
     blockForRendering.innerHTML = '';
 
-    request(`http://localhost:3000/${target}`)
+    request(`http://localhost:3000/${targetRequest}`)
       .then((data) => {
-        const upLimitRender = MAX_CARDS_FOR_PAGE * page;
-        const downLimitRender = (MAX_CARDS_FOR_PAGE * page) - MAX_CARDS_FOR_PAGE;
-        const isRenderedCard = (index) => (index >= downLimitRender && index + 1 <= upLimitRender);
+        const upLimit = MAX_CARDS_FOR_PAGE * page;
+        const downLimit = (MAX_CARDS_FOR_PAGE * page) - MAX_CARDS_FOR_PAGE;
+        const checkerLimitRender = (index) => (index >= downLimit && index + 1 <= upLimit);
 
         data.map((elem, index) => {
-          if (isRenderedCard(index)) createCards(elem);
+          if (checkerLimitRender(index)) createCards(elem);
 
           return false;
         });
@@ -84,11 +86,13 @@ function renderCards() {
       tab.addEventListener('click', (e) => {
         if (!e.target.classList.contains('works__tab-item_active')) {
           tabElements.forEach((elem) => {
-            elem.classList.remove('works__tab-item_active');
+            elem.classList.remove('works__tab-item_active', 'js-works__tab-item_active');
           });
 
-          e.target.classList.add('works__tab-item_active');
-          initRequest(1, true, e.target.dataset.target);
+          e.target.classList.add('works__tab-item_active', 'js-works__tab-item_active');
+          currentTarget = e.target.dataset.target;
+
+          initRequest(1, true, currentTarget);
         }
       });
     });
@@ -109,7 +113,7 @@ function renderCards() {
 
   setEventForTabs();
   setEventForNav();
-  initRequest(1, true, targetRequest);
+  initRequest();
 }
 
 export default renderCards;
