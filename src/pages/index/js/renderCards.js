@@ -28,8 +28,10 @@ function renderCards() {
       src,
       alt,
       descr,
+      repo,
     } = objWithCard;
     const card = document.createElement('div');
+    const linkRepo = repo ? `<a class="works__repo" href="${repo}" target="_blank" rel="noopener noreferrer">GitHub</a>` : '';
     card.classList.add(style.WORKS_BLOCK);
 
     const HTMLBlock = `
@@ -37,6 +39,7 @@ function renderCards() {
         <img src=${src} alt=${alt}>
       </a>
       <div class="works__descr">${descr}</div>
+      ${linkRepo}
     `;
 
     card.insertAdjacentHTML('afterbegin', HTMLBlock);

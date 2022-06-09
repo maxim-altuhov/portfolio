@@ -52,6 +52,10 @@
     }
   }
 
+  &__wrapper-block {
+    text-align: center;
+  }
+
   &__tabs {
     display: flex;
     margin: 50px 0 25px 0;
@@ -174,11 +178,34 @@
   }
 
   &__descr {
+    position: relative;
     text-align: center;
     font-weight: 700;
     line-height: 1.3;
     max-width: 275px;
-    margin: 20px auto 0;
+    margin: 20px auto 5px;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 70px;
+      background-color: $main-color;
+    }
+  }
+
+  &__repo {
+    transition: color 0.2s ease-in;
+    text-decoration: underline;
+    color: #000;
+
+    &:hover {
+      color: $main-color;
+    }
   }
 }
 
