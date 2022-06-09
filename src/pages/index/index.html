@@ -20,6 +20,13 @@
 <body>
   <!-- Menu -->
   <div class="menu" id="scroll_up">
+    <button class="menu__hamburger js-menu__hamburger">
+      <svg viewBox="0 0 100 100" width="80">
+        <path class="menu__hamburger-line menu__hamburger-line_position_top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path class="menu__hamburger-line menu__hamburger-line_position_middle" d="m 30,50 h 40" />
+        <path class="menu__hamburger-line menu__hamburger-line_position_bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      </svg>
+    </button>
     <div class="menu__overlay js-menu__overlay">
       <nav class="menu__wrapper js-menu__wrapper">
         <a href="#skills" class="menu__link js-menu__link" data-scroll>Мои навыки</a>
@@ -28,11 +35,6 @@
         <a href="#contacts" class="menu__link js-menu__link" data-scroll>Контакты</a>
       </nav>
     </div>
-    <svg class="menu__hamburger js-menu__hamburger" viewBox="0 0 100 100" width="80" tabindex="0">
-      <path class="menu__hamburger-line menu__hamburger-line_position_top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-      <path class="menu__hamburger-line menu__hamburger-line_position_middle" d="m 30,50 h 40" />
-      <path class="menu__hamburger-line menu__hamburger-line_position_bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-    </svg>
   </div>
   <!-- Menu -->
 
@@ -41,7 +43,7 @@
     <div class="container">
       <div class="promo__info">
         <span class="marker marker_size_big">Привет!</span>
-        <h1 class="promo__title">Я фрилансер и frontend-разработчик из города Ростова-на-Дону</h1>
+        <h1 class="promo__title">Я фрилансер и frontend-разработчик из г. Ростова-на-Дону</h1>
         <div class="promo__info-about">
           <a class="promo__info-btn" href="#works" data-scroll>Портфолио</a>
           <a class="promo__info-link" href="#about" data-scroll>Про меня</a>
@@ -204,9 +206,9 @@
         <h2 class="title title_position_center">Мои работы</h2>
       </div>
       <div class="works__tabs">
-        <div class="works__tab-item js-works__tab-item works__tab-item_active js-works__tab-item_active" data-target="web">Сайты</div>
-        <div class="works__tab-item js-works__tab-item" data-target="react">React проекты</div>
-        <div class="works__tab-item js-works__tab-item" data-target="other">Разное</div>
+        <button class="works__tab-item js-works__tab-item works__tab-item_active js-works__tab-item_active" data-target="web">Сайты</button>
+        <button class="works__tab-item js-works__tab-item" data-target="react">React проекты</button>
+        <button class="works__tab-item js-works__tab-item" data-target="other">Разное</button>
       </div>
       <div class="works__tab-body">
         <div class="works__nav js-works__nav"></div>
@@ -225,10 +227,10 @@
     <div class="container">
       <div class="section-line"></div>
       <div class="contacts__wrapper">
-        <div class="contacts__left">
-          <h2 class="title title_position_left">Мои контакты</h2>
+        <div class="contacts__col">
+          <h2 class="title title_position_center">Мои контакты</h2>
         </div>
-        <div class="contacts__right">
+        <div class="contacts__col">
           <p class="contacts__item">EMAIL</p>
           <a class="contacts__link" href="mailto:&#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;" target="_blank" rel="noopener noreferrer">
             &#109;&#97;&#120;&#95;&#119;&#111;&#114;&#107;&#56;&#54;&#64;&#109;&#97;&#105;&#108;&#46;&#114;&#117;

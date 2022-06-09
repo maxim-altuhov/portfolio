@@ -9,15 +9,8 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const postcssFlexbugs = require('postcss-flexbugs-fixes');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const pathDir = {
-  src: path.join(__dirname, './src'),
-  dist: path.join(__dirname, './dist'),
-  base: path.join(__dirname, './src/base'),
-  json: path.join(__dirname, './json'),
-  services: path.join(__dirname, './services'),
-  pages: path.join(__dirname, './src/pages'),
-};
-const pagesDir = pathDir.pages;
+
+const pagesDir = path.join(__dirname, './src/pages');
 const allPages = fs.readdirSync(pagesDir);
 const isDev = process.env.NODE_ENV === 'development';
 const isDevServer = process.env.SECOND_ENV === 'devserver';
@@ -108,7 +101,7 @@ const setPlugins = () => {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [{
-        from: path.resolve(__dirname, `${pathDir.base}/assets/`),
+        from: path.resolve(__dirname, 'src/base/assets/'),
         to: path.resolve(__dirname, 'dist/assets/'),
       }],
     }),
@@ -224,10 +217,9 @@ module.exports = {
       '@base': path.resolve(__dirname, 'src/base'),
       '@scss': path.resolve(__dirname, 'src/base/scss'),
       '@fonts': path.resolve(__dirname, 'src/base/fonts'),
-      '@libs': path.resolve(__dirname, 'src/base/libs'),
       '@pages': path.resolve(__dirname, 'src/pages'),
-      '@comp': path.resolve(__dirname, 'src/components'),
-      '@lo': path.resolve(__dirname, 'src/layouts'),
+      '@json': path.resolve(__dirname, 'json'),
+      '@services': path.resolve(__dirname, 'src/services'),
     },
   },
   optimization: setOptimization(),

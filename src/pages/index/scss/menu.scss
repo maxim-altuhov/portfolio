@@ -45,8 +45,8 @@
     margin: 5px 0;
     padding: 0px 20px;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 1.7rem;
+    line-height: 1.5;
     color: #FFFFFF;
     text-transform: uppercase;
     background-image: linear-gradient(#FFFFFF, #FFFFFF);
@@ -56,8 +56,7 @@
     transition: all 0.3s ease-in;
 
     @media (max-width:991px) {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 1.4rem;
     }
 
     &:hover {
@@ -85,7 +84,6 @@
     transition: all 400ms;
     user-select: none;
     cursor: pointer;
-    outline: none;
 
     &_active {
       transform: rotate(45deg);

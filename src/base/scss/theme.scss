@@ -4,10 +4,12 @@
   font-family: $font-family;
 }
 
-html {
+html,
+body {
   font-family: $font-family;
   background-color: #fff;
   font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.6;
+  min-width: 320px;
 }

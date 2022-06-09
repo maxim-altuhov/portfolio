@@ -49,7 +49,7 @@
     }
 
     @media (max-width:767px) {
-      margin: 0 20px;
+      margin: 0 15px;
       flex-basis: auto;
     }
   }
@@ -58,8 +58,7 @@
     margin-top: 25px;
     text-align: justify;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 1rem;
     color: #000000;
 
     @media (max-width:991px) {

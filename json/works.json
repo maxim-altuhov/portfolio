@@ -133,6 +133,30 @@
    "other": [
      {
        "id": 1,
+       "href": "https://4webcode.ru/projects/memory/",
+       "src": "img/work-other6.jpg",
+       "alt": "works-other",
+       "descr": "Игра 'Мемори' на чистом JS и CSS",
+       "parent": "#tab2"
+    },
+     {
+       "id": 2,
+       "href": "https://4webcode.ru/projects/metalamp/",
+       "src": "img/work-slider.jpg",
+       "alt": "works-other",
+       "descr": "Плагин для JQuery, позволяет добавить функционал 'бегунка' на страницу сайта",
+       "parent": "#tab2"
+    },
+     {
+       "id": 3,
+       "href": "https://4webcode.ru/projects/todo/",
+       "src": "img/work-other5.jpg",
+       "alt": "works-other",
+       "descr": "Список дел на чистом JS и CSS",
+       "parent": "#tab2"
+    },
+     {
+       "id": 4,
        "href": "https://4webcode.ru/projects/clock/",
        "src": "img/work-other1.jpg",
        "alt": "works-other",
@@ -140,7 +164,7 @@
        "parent": "#tab2"
 	  },
      {
-       "id": 2,
+       "id": 5,
        "href": "https://4webcode.ru/projects/clock-digital/",
        "src": "img/work-other2.jpg",
        "alt": "works-other",
@@ -148,7 +172,7 @@
        "parent": "#tab2"
 	  },
      {
-       "id": 3,
+       "id": 6,
        "href": "https://4webcode.ru/projects/social-icons/",
        "src": "img/work-other3.jpg",
        "alt": "works-other",
@@ -156,35 +180,11 @@
        "parent": "#tab2"
 	  },
      {
-       "id": 4,
+       "id": 7,
        "href": "https://4webcode.ru/projects/checkbox/",
        "src": "img/work-other4.jpg",
        "alt": "works-other",
        "descr": "Красивый переключатель на CSS",
-       "parent": "#tab2"
-	  },
-     {
-       "id": 5,
-       "href": "https://4webcode.ru/projects/todo/",
-       "src": "img/work-other5.jpg",
-       "alt": "works-other",
-       "descr": "Список дел на чистом JS и CSS",
-       "parent": "#tab2"
-  	},
-     {
-       "id": 6,
-       "href": "https://4webcode.ru/projects/memory/",
-       "src": "img/work-other6.jpg",
-       "alt": "works-other",
-       "descr": "Игра 'Мемори' на чистом JS и CSS",
-       "parent": "#tab2"
-	  },
-     {
-       "id": 7,
-       "href": "https://4webcode.ru/projects/metalamp/",
-       "src": "img/work-slider.jpg",
-       "alt": "works-other",
-       "descr": "Плагин для JQuery, позволяет добавить функционал 'бегунка' на страницу сайта",
        "parent": "#tab2"
 	  }
   ]

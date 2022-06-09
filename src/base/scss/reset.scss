@@ -12,10 +12,6 @@ html,
 body {
   height: 100%;
   min-height: 100%;
-}
-
-body {
-  line-height: 1;
   text-size-adjust: 100%;
 }
 
@@ -26,6 +22,10 @@ a:visited {
 
 ul li {
   list-style: none;
+}
+
+button {
+  background-color: transparent;
 }
 
 :not(output):-moz-ui-invalid {

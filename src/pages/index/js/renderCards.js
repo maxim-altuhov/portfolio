@@ -1,8 +1,17 @@
-import { useHttp } from '../../../services/useHttp';
+import { useHttp } from '@services/useHttp';
+import '@json/works.json';
 
 function renderCards() {
   const { request } = useHttp();
+
+  const URL = './json/works.json';
   const MAX_CARDS_FOR_PAGE = 9;
+  const style = {
+    WORKS_BLOCK: 'works__wrapper-block',
+    PAGE: 'works__page',
+    TAB_ACTIVE: 'works__tab-item_active',
+    PAGE_ACTIVE: 'works__page_active',
+  };
 
   const loader = document.querySelector('.js-works__loading');
   const navBlock = document.querySelector('.js-works__nav');
@@ -21,7 +30,7 @@ function renderCards() {
       descr,
     } = objWithCard;
     const card = document.createElement('div');
-    card.classList.add('works__wrapper-block');
+    card.classList.add(style.WORKS_BLOCK);
 
     const HTMLBlock = `
       <a class="works__element" href=${href} target="_blank" rel="noopener noreferrer">
@@ -40,11 +49,11 @@ function renderCards() {
 
     if (numOfPages !== 1) {
       for (let num = 1; num <= numOfPages; num++) {
-        const page = document.createElement('span');
-        page.classList.add('works__page');
+        const page = document.createElement('button');
+        page.classList.add(style.PAGE);
         page.textContent = num;
 
-        if (num === 1) page.classList.add('works__page_active');
+        if (num === 1) page.classList.add(style.PAGE_ACTIVE);
 
         fragmentWithPage.append(page);
       }
@@ -55,19 +64,19 @@ function renderCards() {
     loader.style.display = '';
     blockForRendering.innerHTML = '';
 
-    request(`http://localhost:3000/${targetRequest}`)
+    request(URL)
       .then((data) => {
         const upLimit = MAX_CARDS_FOR_PAGE * page;
         const downLimit = (MAX_CARDS_FOR_PAGE * page) - MAX_CARDS_FOR_PAGE;
         const checkerLimitRender = (index) => (index >= downLimit && index + 1 <= upLimit);
 
-        data.map((elem, index) => {
+        data[targetRequest].map((elem, index) => {
           if (checkerLimitRender(index)) createCards(elem);
 
           return false;
         });
 
-        if (useCreatePage) createPage(data.length);
+        if (useCreatePage) createPage(data[targetRequest].length);
       })
       .then(() => {
         loader.style.display = 'none';
@@ -84,12 +93,12 @@ function renderCards() {
   const setEventForTabs = () => {
     tabElements.forEach((tab) => {
       tab.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('works__tab-item_active')) {
+        if (!e.target.classList.contains(style.TAB_ACTIVE)) {
           tabElements.forEach((elem) => {
-            elem.classList.remove('works__tab-item_active', 'js-works__tab-item_active');
+            elem.classList.remove(style.TAB_ACTIVE, `js-${style.TAB_ACTIVE}`);
           });
 
-          e.target.classList.add('works__tab-item_active', 'js-works__tab-item_active');
+          e.target.classList.add(style.TAB_ACTIVE, `js-${style.TAB_ACTIVE}`);
           currentTarget = e.target.dataset.target;
 
           initRequest(1, true, currentTarget);
@@ -100,12 +109,15 @@ function renderCards() {
 
   const setEventForNav = () => {
     navBlock.addEventListener('click', (e) => {
-      if (e.target.classList.contains('works__page') && !e.target.classList.contains('works__page_active')) {
+      if (
+        e.target.classList.contains(style.PAGE)
+        && !e.target.classList.contains(style.PAGE_ACTIVE)
+      ) {
         [...navBlock.children].forEach((elem) => {
-          elem.classList.remove('works__page_active');
+          elem.classList.remove(style.PAGE_ACTIVE);
         });
 
-        e.target.classList.add('works__page_active');
+        e.target.classList.add(style.PAGE_ACTIVE);
         initRequest(Number(e.target.textContent), false);
       }
     });
