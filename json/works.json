@@ -114,7 +114,16 @@
        "descr": "Одностраничный сайт"
     }
   ],
-   "react": [],
+   "react": [
+     {
+       "id": 1,
+       "href": "https://maxim-altuhov.github.io/marvel-app/",
+       "src": "img/work-react1.jpg",
+       "alt": "react-app",
+       "descr": "Информационный портал Marvel",
+       "repo": "https://github.com/maxim-altuhov/marvel-app"
+    }
+   ],
    "other": [
      {
        "id": 1,

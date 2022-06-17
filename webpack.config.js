@@ -105,6 +105,12 @@ const setPlugins = () => {
         to: path.resolve(__dirname, 'dist/assets/'),
       }],
     }),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.resolve(__dirname, 'src/works-img/'),
+        to: path.resolve(__dirname, 'dist/img/'),
+      }],
+    }),
     new MiniCssExtractPlugin({
       filename: `css/${getFileName('css')}`,
     }),
