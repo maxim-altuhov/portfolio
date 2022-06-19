@@ -85,6 +85,10 @@
     user-select: none;
     cursor: pointer;
 
+    @media (max-width:575px) {
+      margin-left: 0;
+    }
+
     &_active {
       transform: rotate(45deg);
       position: fixed;
