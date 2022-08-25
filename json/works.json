@@ -120,7 +120,7 @@
        "href": "https://todo-de8c9.web.app",
        "src": "img/work-react0.jpg",
        "alt": "react-app",
-       "descr": "ToDo React App",
+       "descr": "ToDo React App<br> Demo:<br> E-mail: test@mail.ru<br> Password: 777www",
        "repo": "https://github.com/maxim-altuhov/todo-react"
    },
      {
