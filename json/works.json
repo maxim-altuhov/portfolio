@@ -117,6 +117,14 @@
    "react": [
      {
        "id": 1,
+       "href": "https://todo-de8c9.web.app",
+       "src": "img/work-react0.jpg",
+       "alt": "react-app",
+       "descr": "ToDo React App",
+       "repo": "https://github.com/maxim-altuhov/todo-react"
+   },
+     {
+       "id": 2,
        "href": "https://maxim-altuhov.github.io/marvel-app/",
        "src": "img/work-react1.jpg",
        "alt": "react-app",
@@ -124,7 +132,7 @@
        "repo": "https://github.com/maxim-altuhov/marvel-app"
     },
      {
-       "id": 2,
+       "id": 3,
        "href": "https://maxim-altuhov.github.io/employees-app/",
        "src": "img/work-react2.jpg",
        "alt": "react-app",
@@ -132,7 +140,7 @@
        "repo": "https://github.com/maxim-altuhov/employees-app"
     },
      {
-       "id": 3,
+       "id": 4,
        "href": "https://hero-admin-panel-maxim-altuhov.vercel.app/",
        "src": "img/work-react3.jpg",
        "alt": "react-app",
