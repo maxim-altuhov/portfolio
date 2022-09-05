@@ -122,30 +122,6 @@
        "alt": "react-app",
        "descr": "ToDo React App<br> Demo:<br> E-mail: test@mail.ru<br> Password: 777www",
        "repo": "https://github.com/maxim-altuhov/todo-react"
-   },
-     {
-       "id": 2,
-       "href": "https://maxim-altuhov.github.io/marvel-app/",
-       "src": "img/work-react1.jpg",
-       "alt": "react-app",
-       "descr": "Информационный портал Marvel",
-       "repo": "https://github.com/maxim-altuhov/marvel-app"
-    },
-     {
-       "id": 3,
-       "href": "https://maxim-altuhov.github.io/employees-app/",
-       "src": "img/work-react2.jpg",
-       "alt": "react-app",
-       "descr": "Список сотрудников",
-       "repo": "https://github.com/maxim-altuhov/employees-app"
-    },
-     {
-       "id": 4,
-       "href": "https://hero-admin-panel-maxim-altuhov.vercel.app/",
-       "src": "img/work-react3.jpg",
-       "alt": "react-app",
-       "descr": "Hero admin panel (React+Redux)",
-       "repo": "https://github.com/maxim-altuhov/hero_admin_panel"
     }
    ],
    "other": [
